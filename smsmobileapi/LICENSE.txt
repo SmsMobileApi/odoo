@@ -1,10 +1,7 @@
-Proprietary License – All Rights Reserved
+This module is proprietary and protected by copyright.
 
-This software is the intellectual property of SMSMobileAPI.
-You are not allowed to copy, distribute, sublicense, or modify any part of this code
-without a prior written agreement from the author.
+Reproduction, distribution, modification, or use of this code without a valid license agreement is strictly prohibited.
 
-Unauthorized use or distribution of this module is strictly prohibited.
-
-For licensing inquiries, please contact:
-info@smsmobileapi.com
+To obtain a commercial license or ask questions, please contact us:
+📧 info@smsmobileapi.com
+🌐 https://www.smsmobileapi.com

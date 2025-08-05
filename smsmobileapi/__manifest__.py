@@ -27,7 +27,7 @@
         'static/description/icon.png',
         'static/description/banner.png',
     ],
-    'license': 'Other proprietary',
+    'license': 'OPL-1',
     'installable': True,
     'application': True,
     'auto_install': False,
