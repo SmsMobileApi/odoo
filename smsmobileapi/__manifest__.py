@@ -11,6 +11,18 @@ Features include:
 - Full history of sent messages in Odoo's chatter
 - No third-party SMS gateways: use your own device and plan
 - Perfect for notifications, alerts, and two-way communications
+
+---
+
+## ❗ License & Legal Notice
+
+This module is proprietary and protected by copyright.
+
+Reproduction, distribution, modification, or use of this code without a valid license agreement is strictly prohibited.
+
+To obtain a commercial license or ask questions, please contact us at:  
+📧 info@smsmobileapi.com  
+🌐 https://www.smsmobileapi.com
     """,
     'author': "SMSMobileAPI Team",
     'website': "https://www.smsmobileapi.com/plugin-odoo",
@@ -34,7 +46,7 @@ Features include:
     ],
 },
 
-    
+    'license': 'Other proprietary',
     'installable': True,
     'application': True,
     'auto_install': False,
