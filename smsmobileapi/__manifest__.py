@@ -15,8 +15,6 @@
   <li>No external SMS gateway or third-party provider is required.</li>
 </ul>
 
-<p>This ensures full control, privacy, and natural communication with your contacts.</p>
-
 <p><strong>Requirements:</strong></p>
 <ul>
   <li>A free account on <a href="https://smsmobileapi.com" target="_blank">smsmobileapi.com</a> (no credit card required)</li>
@@ -24,6 +22,7 @@
 </ul>
 
 <p>Each account comes with a <strong>3-day free trial</strong> to test the service without commitment.</p>
+
 <hr/>
 <h3>❗ License & Legal Notice</h3>
 <p>This module is <strong>proprietary and protected by copyright</strong>.</p>
@@ -36,6 +35,7 @@
   <li>🌐 <a href="https://www.smsmobileapi.com" target="_blank">https://www.smsmobileapi.com</a></li>
 </ul>
 """,
+
 
     'author': "SMSMobileAPI Team",
     'website': "https://www.smsmobileapi.com/plugin-odoo",
