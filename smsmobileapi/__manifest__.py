@@ -45,7 +45,10 @@ To obtain a commercial license or ask questions, please contact us at:
         'sms_mobile_api/static/src/css/custom.css',
     ],
 },
-
+    'images': [
+        'static/description/icon.png',
+        'static/description/banner.png',
+    ],
     'license': 'Other proprietary',
     'installable': True,
     'application': True,
