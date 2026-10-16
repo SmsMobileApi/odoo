@@ -1,7 +1,7 @@
 {
     "name": "SMSMobileAPI SMS & Calls",
     "summary": "Send SMS from your own mobile and synchronize SMS and call activity",
-    "version": "17.0.1.2.2",
+    "version": "17.0.1.2.3",
     "category": "Productivity/Discuss",
     "author": "SMSMobileAPI",
     "maintainer": "SMSMobileAPI",

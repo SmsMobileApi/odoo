@@ -1,5 +1,9 @@
 # Changelog
 
+## 17.0.1.2.3
+
+- Replace non-ASCII presentation symbols with HTML entities for consistent rendering on Odoo Apps.
+
 ## 17.0.1.2.2
 
 - Prepared the add-on metadata and documentation for Odoo Apps publication.
