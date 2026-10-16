@@ -1,0 +1,2460 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* sms_mobile_api_call
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0-20240830\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-15 22:53+0000\n"
+"PO-Revision-Date: 2026-10-15 22:53+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: fr_BE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: sms_mobile_api_call
+#. odoo-python
+#: code:addons/sms_mobile_api_call/models/activity.py:0
+#, python-format
+msgid " · %(seconds)s seconds"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#. odoo-python
+#: code:addons/sms_mobile_api_call/models/config.py:0
+#, python-format
+msgid "%(count)s %(label)s"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#. odoo-python
+#: code:addons/sms_mobile_api_call/models/config.py:0
+#, python-format
+msgid "%(count)s mobile gateway(s)"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#. odoo-python
+#: code:addons/sms_mobile_api_call/models/config.py:0
+#, python-format
+msgid "%(count)s mobile gateway(s) synchronized."
+msgstr ""
+
+#. module: sms_mobile_api_call
+#. odoo-python
+#: code:addons/sms_mobile_api_call/models/config.py:0
+#, python-format
+msgid "%(detail)s. Check: %(errors)s"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#. odoo-python
+#: code:addons/sms_mobile_api_call/models/config.py:0
+#, python-format
+msgid "%(updated)s of %(total)s connected mobile(s) updated."
+msgstr "%(updated)s mobile(s) sur %(total)s actualisé(s)."
+
+#. module: sms_mobile_api_call
+#: model_terms:ir.ui.view,arch_db:sms_mobile_api_call.view_smsmobileapi_send_wizard_form
+msgid "+32470000000"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model_terms:ir.ui.view,arch_db:sms_mobile_api_call.view_partner_form_smsmobileapi
+#: model_terms:ir.ui.view,arch_db:sms_mobile_api_call.view_smsmobileapi_conversation_form
+msgid "<i class=\"fa fa-bolt\"/> Action"
+msgstr "<i class=\"fa fa-bolt\"/> Action"
+
+#. module: sms_mobile_api_call
+#: model_terms:ir.ui.view,arch_db:sms_mobile_api_call.view_partner_form_smsmobileapi
+msgid "<i class=\"fa fa-mobile\" title=\"Mobile used\"/>"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model_terms:ir.ui.view,arch_db:sms_mobile_api_call.view_partner_form_smsmobileapi
+#: model_terms:ir.ui.view,arch_db:sms_mobile_api_call.view_smsmobileapi_conversation_form
+#: model_terms:ir.ui.view,arch_db:sms_mobile_api_call.view_smsmobileapi_conversation_kanban
+msgid "<i class=\"fa fa-reply\"/> Reply"
+msgstr "<i class=\"fa fa-reply\"/> Répondre"
+
+#. module: sms_mobile_api_call
+#: model_terms:ir.ui.view,arch_db:sms_mobile_api_call.view_smsmobileapi_conversation_form
+msgid "<span class=\"o_stat_text\">Events</span>"
+msgstr "<span class=\"o_stat_text\">Événements</span>"
+
+#. module: sms_mobile_api_call
+#: model_terms:ir.ui.view,arch_db:sms_mobile_api_call.view_smsmobileapi_business_action_wizard_form
+msgid ""
+"<span class=\"smsmobileapi_wizard_icon fa fa-bolt\" title=\"Odoo action\" "
+"aria-label=\"Odoo action\"/>"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model_terms:ir.ui.view,arch_db:sms_mobile_api_call.view_smsmobileapi_send_wizard_form
+msgid ""
+"<span class=\"smsmobileapi_wizard_icon fa fa-mobile\" title=\"Connected "
+"mobile\" aria-label=\"Connected mobile\"/>"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model_terms:ir.ui.view,arch_db:sms_mobile_api_call.view_smsmobileapi_config_form
+msgid ""
+"<strong>Check access granted on each mobile.</strong>\n"
+"                        Open SMSMobileAPI on the phone to change SMS or call access, then use Refresh status below. Only the allowed or missing state is retrieved—never SMS, phone numbers, contacts or call content."
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model:ir.model.constraint,message:sms_mobile_api_call.constraint_smsmobileapi_conversation_company_phone_unique
+msgid "A conversation already exists for this phone number in this company."
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model_terms:ir.ui.view,arch_db:sms_mobile_api_call.view_smsmobileapi_send_wizard_form
+msgid ""
+"A successful API response means the message was queued. The connected phone "
+"and carrier may need a short processing time before the SMS is sent."
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model_terms:ir.ui.view,arch_db:sms_mobile_api_call.view_smsmobileapi_config_form
+msgid "API key"
+msgstr "Clé API"
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_document_share__access_count
+msgid "Access Count"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model_terms:ir.ui.view,arch_db:sms_mobile_api_call.view_smsmobileapi_activity_tree
+msgid "Action"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_config__message_needaction
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_conversation__message_needaction
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_support_ticket__message_needaction
+msgid "Action Needed"
+msgstr "Action requise"
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_business_action_wizard__action_type
+msgid "Action Type"
+msgstr "Type d’action"
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_config__active
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_document_share__active
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_mobile__active
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_quick_reply__active
+msgid "Active"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_config__activity_ids
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_conversation__activity_ids
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_support_ticket__activity_ids
+msgid "Activities"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_business_action_wizard__activity_id
+#: model_terms:ir.ui.view,arch_db:sms_mobile_api_call.view_smsmobileapi_activity_search
+msgid "Activity"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_activity__activity_at
+msgid "Activity At"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_conversation__activity_count
+msgid "Activity Count"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_config__activity_exception_decoration
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_conversation__activity_exception_decoration
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_support_ticket__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_config__activity_state
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_conversation__activity_state
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_support_ticket__activity_state
+msgid "Activity State"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_config__activity_type_icon
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_conversation__activity_type_icon
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_support_ticket__activity_type_icon
+msgid "Activity Type Icon"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model_terms:ir.ui.view,arch_db:sms_mobile_api_call.view_smsmobileapi_activity_search
+msgid "Activity date"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model_terms:ir.ui.view,arch_db:sms_mobile_api_call.view_partner_form_smsmobileapi
+msgid "All mobiles"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields.selection,name:sms_mobile_api_call.selection__smsmobileapi_mobile__permission_call_incoming__granted
+#: model:ir.model.fields.selection,name:sms_mobile_api_call.selection__smsmobileapi_mobile__permission_call_missed__granted
+#: model:ir.model.fields.selection,name:sms_mobile_api_call.selection__smsmobileapi_mobile__permission_call_outgoing__granted
+#: model:ir.model.fields.selection,name:sms_mobile_api_call.selection__smsmobileapi_mobile__permission_sms_received__granted
+msgid "Allowed"
+msgstr "Autorisé"
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_config__api_base_url
+msgid "Api Base Url"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_config__api_key
+msgid "Api Key"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_mobile__app_version
+msgid "App Version"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model_terms:ir.ui.view,arch_db:sms_mobile_api_call.view_smsmobileapi_conversation_form
+msgid "Archive"
+msgstr "Archiver"
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields.selection,name:sms_mobile_api_call.selection__smsmobileapi_conversation__state__archived
+#: model_terms:ir.ui.view,arch_db:sms_mobile_api_call.view_smsmobileapi_conversation_form
+#: model_terms:ir.ui.view,arch_db:sms_mobile_api_call.view_smsmobileapi_conversation_search
+msgid "Archived"
+msgstr "Archivé"
+
+#. module: sms_mobile_api_call
+#: model_terms:ir.ui.view,arch_db:sms_mobile_api_call.view_smsmobileapi_conversation_form
+#: model_terms:ir.ui.view,arch_db:sms_mobile_api_call.view_smsmobileapi_conversation_kanban
+msgid "Assign to me"
+msgstr "Me l’attribuer"
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_business_action_wizard__assigned_user_id
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_conversation__assigned_user_id
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_support_ticket__assigned_user_id
+msgid "Assigned to"
+msgstr "Attribué à"
+
+#. module: sms_mobile_api_call
+#: model_terms:ir.ui.view,arch_db:sms_mobile_api_call.view_smsmobileapi_conversation_search
+msgid "Assigned user"
+msgstr "Utilisateur attribué"
+
+#. module: sms_mobile_api_call
+#: model_terms:ir.ui.view,arch_db:sms_mobile_api_call.view_smsmobileapi_send_wizard_form
+msgid ""
+"Attach a file to append a random, expiring HTTPS link to the SMS. The link "
+"expires automatically and the original API key is never exposed."
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_document_share__attachment_id
+msgid "Attachment"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_config__message_attachment_count
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_conversation__message_attachment_count
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_support_ticket__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_config__auto_sync
+msgid "Auto Sync"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model_terms:ir.ui.view,arch_db:sms_mobile_api_call.view_smsmobileapi_send_wizard_form
+msgid "Automatic — first available mobile"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_mobile__battery_level
+msgid "Battery Level"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields.selection,name:sms_mobile_api_call.selection__smsmobileapi_business_action_wizard__action_type__opportunity
+msgid "CRM opportunity"
+msgstr "Opportunité CRM"
+
+#. module: sms_mobile_api_call
+#: model_terms:ir.ui.view,arch_db:sms_mobile_api_call.view_partner_form_smsmobileapi
+#: model_terms:ir.ui.view,arch_db:sms_mobile_api_call.view_smsmobileapi_conversation_form
+msgid "Call activity"
+msgstr "Activité d’appel"
+
+#. module: sms_mobile_api_call
+#: model:smsmobileapi.quick.reply,name:sms_mobile_api_call.quick_reply_callback
+msgid "Call back"
+msgstr "Rappeler"
+
+#. module: sms_mobile_api_call
+#: model_terms:ir.ui.view,arch_db:sms_mobile_api_call.view_smsmobileapi_business_action_wizard_form
+msgid "Cancel"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields.selection,name:sms_mobile_api_call.selection__smsmobileapi_support_ticket__state__cancelled
+msgid "Cancelled"
+msgstr "Annulé"
+
+#. module: sms_mobile_api_call
+#: model_terms:ir.ui.view,arch_db:sms_mobile_api_call.view_smsmobileapi_send_wizard_form
+msgid "Choose a saved quick reply"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model_terms:ir.ui.view,arch_db:sms_mobile_api_call.view_smsmobileapi_send_wizard_form
+msgid "Close"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_activity__company_id
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_business_action_wizard__company_id
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_config__company_id
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_conversation__company_id
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_document_share__company_id
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_mobile__company_id
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_quick_reply__company_id
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_send_wizard__company_id
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_support_ticket__company_id
+msgid "Company"
+msgstr "Société"
+
+#. module: sms_mobile_api_call
+#: model:ir.ui.menu,name:sms_mobile_api_call.menu_smsmobileapi_activity
+msgid "Complete Activity History"
+msgstr "Activité SMS et appels"
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields.selection,name:sms_mobile_api_call.selection__smsmobileapi_activity__status__completed
+msgid "Completed"
+msgstr "Terminé"
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_activity__config_id
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_mobile__config_id
+msgid "Config"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model:ir.actions.act_window,name:sms_mobile_api_call.action_smsmobileapi_config
+#: model:ir.ui.menu,name:sms_mobile_api_call.menu_smsmobileapi_settings
+msgid "Configuration"
+msgstr "Configuration"
+
+#. module: sms_mobile_api_call
+#. odoo-python
+#: code:addons/sms_mobile_api_call/wizard/send_wizard.py:0
+#, python-format
+msgid "Configure SMSMobileAPI for this company before sending an SMS."
+msgstr "Configurez SMSMobileAPI pour cette société avant d'envoyer un SMS."
+
+#. module: sms_mobile_api_call
+#: model_terms:ir.actions.act_window,help:sms_mobile_api_call.action_smsmobileapi_activity
+msgid ""
+"Connect SMSMobileAPI, enable the mobile permissions you need, then "
+"synchronize received and sent SMS plus missed, incoming and outgoing calls."
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model_terms:ir.actions.act_window,help:sms_mobile_api_call.action_smsmobileapi_config
+msgid "Connect your SMSMobileAPI account."
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields.selection,name:sms_mobile_api_call.selection__smsmobileapi_config__connection_state__connected
+msgid "Connected"
+msgstr "Connecté"
+
+#. module: sms_mobile_api_call
+#: model:ir.actions.act_window,name:sms_mobile_api_call.action_smsmobileapi_mobile
+#: model:ir.ui.menu,name:sms_mobile_api_call.menu_smsmobileapi_mobiles
+msgid "Connected Mobiles"
+msgstr "Mobiles connectés"
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields.selection,name:sms_mobile_api_call.selection__smsmobileapi_activity__source__mobile
+msgid "Connected mobile"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_config__mobile_ids
+msgid "Connected mobiles"
+msgstr "Mobiles connectés"
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_config__connection_state
+msgid "Connection State"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#. odoo-python
+#: code:addons/sms_mobile_api_call/models/config.py:0
+#, python-format
+msgid "Connection successful"
+msgstr "Connexion réussie"
+
+#. module: sms_mobile_api_call
+#: model:ir.model,name:sms_mobile_api_call.model_res_partner
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_business_action_wizard__partner_id
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_conversation__partner_id
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_send_wizard__partner_id
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_support_ticket__partner_id
+#: model_terms:ir.ui.view,arch_db:sms_mobile_api_call.view_smsmobileapi_activity_search
+#: model_terms:ir.ui.view,arch_db:sms_mobile_api_call.view_smsmobileapi_conversation_search
+msgid "Contact"
+msgstr "Contact"
+
+#. module: sms_mobile_api_call
+#: model:ir.ui.menu,name:sms_mobile_api_call.menu_smsmobileapi_contacts
+msgid "Contacts"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_activity__conversation_id
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_support_ticket__conversation_id
+msgid "Conversation"
+msgstr "Conversation"
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_res_partner__smsmobileapi_filtered_activity_ids
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_res_users__smsmobileapi_filtered_activity_ids
+msgid "Conversation timeline"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model_terms:ir.ui.view,arch_db:sms_mobile_api_call.view_smsmobileapi_activity_form
+#: model_terms:ir.ui.view,arch_db:sms_mobile_api_call.view_smsmobileapi_conversation_form
+msgid "Create Odoo action"
+msgstr "Créer une action Odoo"
+
+#. module: sms_mobile_api_call
+#: model_terms:ir.ui.view,arch_db:sms_mobile_api_call.view_smsmobileapi_business_action_wizard_form
+msgid ""
+"Create a commercial or operational follow-up without copying the contact, "
+"number or message."
+msgstr ""
+"Créez un suivi commercial ou opérationnel sans recopier le contact, le "
+"numéro ni le message."
+
+#. module: sms_mobile_api_call
+#. odoo-python
+#: code:addons/sms_mobile_api_call/models/activity.py:0
+#: model_terms:ir.ui.view,arch_db:sms_mobile_api_call.view_smsmobileapi_business_action_wizard_form
+#, python-format
+msgid "Create an Odoo action"
+msgstr "Créer une action Odoo"
+
+#. module: sms_mobile_api_call
+#: model:ir.model,name:sms_mobile_api_call.model_smsmobileapi_business_action_wizard
+msgid "Create an Odoo action from mobile activity"
+msgstr "Créer une action Odoo depuis l’activité mobile"
+
+#. module: sms_mobile_api_call
+#: model_terms:ir.ui.view,arch_db:sms_mobile_api_call.view_smsmobileapi_business_action_wizard_form
+msgid "Create and open"
+msgstr "Créer et ouvrir"
+
+#. module: sms_mobile_api_call
+#. odoo-python
+#: code:addons/sms_mobile_api_call/wizard/business_action_wizard.py:0
+#, python-format
+msgid "Create or link a contact before creating a quotation."
+msgstr ""
+
+#. module: sms_mobile_api_call
+#. odoo-python
+#: code:addons/sms_mobile_api_call/wizard/business_action_wizard.py:0
+#, python-format
+msgid "Create or link a contact before scheduling a follow-up."
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_activity__create_uid
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_business_action_wizard__create_uid
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_config__create_uid
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_conversation__create_uid
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_document_share__create_uid
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_mobile__create_uid
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_quick_reply__create_uid
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_send_wizard__create_uid
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_support_ticket__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_activity__create_date
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_business_action_wizard__create_date
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_config__create_date
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_conversation__create_date
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_document_share__create_date
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_mobile__create_date
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_quick_reply__create_date
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_send_wizard__create_date
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_support_ticket__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields.selection,name:sms_mobile_api_call.selection__smsmobileapi_business_action_wizard__priority__3
+#: model:ir.model.fields.selection,name:sms_mobile_api_call.selection__smsmobileapi_conversation__priority__3
+#: model:ir.model.fields.selection,name:sms_mobile_api_call.selection__smsmobileapi_support_ticket__priority__3
+msgid "Critical"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model_terms:ir.ui.view,arch_db:sms_mobile_api_call.view_smsmobileapi_activity_search
+msgid "Day"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_business_action_wizard__deadline
+msgid "Deadline"
+msgstr "Échéance"
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_config__default_mobile_id
+msgid "Default Mobile"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields.selection,name:sms_mobile_api_call.selection__smsmobileapi_activity__status__delivered
+msgid "Delivered"
+msgstr "Remis"
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_business_action_wizard__description
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_support_ticket__description
+msgid "Description"
+msgstr "Description"
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_activity__direction
+#: model_terms:ir.ui.view,arch_db:sms_mobile_api_call.view_smsmobileapi_activity_search
+msgid "Direction"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_activity__display_name
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_business_action_wizard__display_name
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_config__display_name
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_conversation__display_name
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_document_share__display_name
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_mobile__display_name
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_quick_reply__display_name
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_send_wizard__display_name
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_support_ticket__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#. odoo-python
+#: code:addons/sms_mobile_api_call/wizard/send_wizard.py:0
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_activity__document_id
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_send_wizard__upload
+#, python-format
+msgid "Document"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_activity__document_model
+msgid "Document Model"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#. odoo-python
+#: code:addons/sms_mobile_api_call/models/document_share.py:0
+#, python-format
+msgid "Documents sent by secure link are limited to 10 MB."
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields.selection,name:sms_mobile_api_call.selection__smsmobileapi_send_wizard__state__draft
+msgid "Draft"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_activity__duration_seconds
+msgid "Duration Seconds"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#. odoo-python
+#: code:addons/sms_mobile_api_call/models/config.py:0
+#, python-format
+msgid "Enter a valid SMSMobileAPI URL."
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model_terms:ir.actions.act_window,help:sms_mobile_api_call.action_smsmobileapi_config
+msgid "Enter the account API key and test the connection."
+msgstr "Saisissez la clé API du compte et testez la connexion."
+
+#. module: sms_mobile_api_call
+#. odoo-python
+#: code:addons/sms_mobile_api_call/wizard/send_wizard.py:0
+#, python-format
+msgid ""
+"Enter the recipient number in international format, for example "
+"+32470000000."
+msgstr ""
+"Saisissez le numéro du destinataire au format international, par exemple "
+"+32470000000."
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields.selection,name:sms_mobile_api_call.selection__smsmobileapi_activity__status__error
+msgid "Error"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_activity__error_message
+msgid "Error Message"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model_terms:ir.ui.view,arch_db:sms_mobile_api_call.view_smsmobileapi_activity_search
+msgid "Errors"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_activity__event_type
+msgid "Event Type"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model_terms:ir.ui.view,arch_db:sms_mobile_api_call.view_smsmobileapi_quick_reply_form
+msgid "Example: I will call you back"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model_terms:ir.ui.view,arch_db:sms_mobile_api_call.view_smsmobileapi_business_action_wizard_form
+msgid "Existing document"
+msgstr "Document existant"
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_document_share__expires_at
+msgid "Expires At"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_activity__external_ref
+msgid "External Ref"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields.selection,name:sms_mobile_api_call.selection__smsmobileapi_config__last_sync_status__error
+msgid "Failed"
+msgstr "Échouée"
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_res_partner__smsmobileapi_mobile_filter_id
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_res_users__smsmobileapi_mobile_filter_id
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_conversation__mobile_filter_id
+msgid "Filter by mobile"
+msgstr "Filtrer par mobile"
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_conversation__filtered_activity_ids
+msgid "Filtered timeline"
+msgstr "Chronologie filtrée"
+
+#. module: sms_mobile_api_call
+#. odoo-python
+#: code:addons/sms_mobile_api_call/wizard/business_action_wizard.py:0
+#, python-format
+msgid "Follow up %(event)s from %(contact)s"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_activity__followup_activity_id
+msgid "Follow-up"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields.selection,name:sms_mobile_api_call.selection__smsmobileapi_business_action_wizard__action_type__followup
+msgid "Follow-up activity"
+msgstr "Activité de suivi"
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_config__message_follower_ids
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_conversation__message_follower_ids
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_support_ticket__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_config__message_partner_ids
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_conversation__message_partner_ids
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_support_ticket__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,help:sms_mobile_api_call.field_smsmobileapi_config__activity_type_icon
+#: model:ir.model.fields,help:sms_mobile_api_call.field_smsmobileapi_conversation__activity_type_icon
+#: model:ir.model.fields,help:sms_mobile_api_call.field_smsmobileapi_support_ticket__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#. odoo-python
+#: code:addons/sms_mobile_api_call/models/config.py:0
+#, python-format
+msgid "For security, the API host must be api.smsmobileapi.com."
+msgstr ""
+"Pour des raisons de sécurité, l'hôte de l'API doit être "
+"api.smsmobileapi.com."
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields.selection,name:sms_mobile_api_call.selection__smsmobileapi_send_wizard__message_kind__free
+msgid "Free-form SMS"
+msgstr "SMS libre"
+
+#. module: sms_mobile_api_call
+#: model_terms:ir.ui.view,arch_db:sms_mobile_api_call.view_smsmobileapi_activity_search
+#: model_terms:ir.ui.view,arch_db:sms_mobile_api_call.view_smsmobileapi_conversation_search
+msgid "Group By"
+msgstr "Regrouper par"
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_config__has_message
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_conversation__has_message
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_support_ticket__has_message
+msgid "Has Message"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#. odoo-python
+#: code:addons/sms_mobile_api_call/wizard/send_wizard.py:0
+#, python-format
+msgid "Hello %(name)s, "
+msgstr ""
+
+#. module: sms_mobile_api_call
+#. odoo-python
+#: code:addons/sms_mobile_api_call/wizard/send_wizard.py:0
+#, python-format
+msgid ""
+"Hello %(name)s, purchase order %(reference)s is available here: %(url)s"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#. odoo-python
+#: code:addons/sms_mobile_api_call/wizard/send_wizard.py:0
+#, python-format
+msgid ""
+"Hello %(name)s, this is a reminder that invoice %(reference)s was due on "
+"%(due)s. View it securely: %(url)s"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#. odoo-python
+#: code:addons/sms_mobile_api_call/wizard/send_wizard.py:0
+#, python-format
+msgid ""
+"Hello %(name)s, your %(label)s %(reference)s is available here: %(url)s"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#. odoo-python
+#: code:addons/sms_mobile_api_call/wizard/send_wizard.py:0
+#, python-format
+msgid "Hello %(name)s, your invoice %(reference)s is available here: %(url)s"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model:smsmobileapi.quick.reply,message:sms_mobile_api_call.quick_reply_received
+msgid "I received your message and will reply shortly."
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_activity__id
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_business_action_wizard__id
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_config__id
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_conversation__id
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_document_share__id
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_mobile__id
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_quick_reply__id
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_send_wizard__id
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_support_ticket__id
+msgid "ID"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_config__activity_exception_icon
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_conversation__activity_exception_icon
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_support_ticket__activity_exception_icon
+msgid "Icon"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,help:sms_mobile_api_call.field_smsmobileapi_config__activity_exception_icon
+#: model:ir.model.fields,help:sms_mobile_api_call.field_smsmobileapi_conversation__activity_exception_icon
+#: model:ir.model.fields,help:sms_mobile_api_call.field_smsmobileapi_support_ticket__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,help:sms_mobile_api_call.field_smsmobileapi_config__message_needaction
+#: model:ir.model.fields,help:sms_mobile_api_call.field_smsmobileapi_conversation__message_needaction
+#: model:ir.model.fields,help:sms_mobile_api_call.field_smsmobileapi_support_ticket__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,help:sms_mobile_api_call.field_smsmobileapi_config__message_has_error
+#: model:ir.model.fields,help:sms_mobile_api_call.field_smsmobileapi_config__message_has_sms_error
+#: model:ir.model.fields,help:sms_mobile_api_call.field_smsmobileapi_conversation__message_has_error
+#: model:ir.model.fields,help:sms_mobile_api_call.field_smsmobileapi_conversation__message_has_sms_error
+#: model:ir.model.fields,help:sms_mobile_api_call.field_smsmobileapi_support_ticket__message_has_error
+#: model:ir.model.fields,help:sms_mobile_api_call.field_smsmobileapi_support_ticket__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_config__import_api_sent_sms
+msgid "Import Api Sent Sms"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_config__import_incoming_calls
+msgid "Import Incoming Calls"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_config__import_missed_calls
+msgid "Import Missed Calls"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_config__import_mobile_sent_sms
+msgid "Import Mobile Sent Sms"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_config__import_outgoing_calls
+msgid "Import Outgoing Calls"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_config__import_received_sms
+msgid "Import Received Sms"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields.selection,name:sms_mobile_api_call.selection__smsmobileapi_business_action_wizard__priority__1
+#: model:ir.model.fields.selection,name:sms_mobile_api_call.selection__smsmobileapi_conversation__priority__1
+#: model:ir.model.fields.selection,name:sms_mobile_api_call.selection__smsmobileapi_support_ticket__priority__1
+#: model_terms:ir.ui.view,arch_db:sms_mobile_api_call.view_smsmobileapi_conversation_search
+msgid "Important"
+msgstr "Important"
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields.selection,name:sms_mobile_api_call.selection__smsmobileapi_conversation__state__open
+#: model:ir.model.fields.selection,name:sms_mobile_api_call.selection__smsmobileapi_support_ticket__state__progress
+#: model_terms:ir.ui.view,arch_db:sms_mobile_api_call.view_smsmobileapi_conversation_search
+msgid "In progress"
+msgstr "En cours"
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields.selection,name:sms_mobile_api_call.selection__smsmobileapi_activity__direction__incoming
+#: model:ir.model.fields.selection,name:sms_mobile_api_call.selection__smsmobileapi_conversation__last_direction__incoming
+#: model_terms:ir.ui.view,arch_db:sms_mobile_api_call.view_smsmobileapi_activity_search
+msgid "Incoming"
+msgstr "Entrant"
+
+#. module: sms_mobile_api_call
+#. odoo-python
+#: code:addons/sms_mobile_api_call/models/activity.py:0
+#, python-format
+msgid "Incoming SMS"
+msgstr "SMS reçu"
+
+#. module: sms_mobile_api_call
+#: model_terms:ir.actions.act_window,help:sms_mobile_api_call.action_smsmobileapi_conversation
+msgid ""
+"Incoming SMS and calls will be grouped automatically by contact and phone "
+"number."
+msgstr ""
+"Les SMS et appels entrants seront automatiquement regroupés par contact et "
+"numéro de téléphone."
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields.selection,name:sms_mobile_api_call.selection__smsmobileapi_activity__event_type__call_incoming
+#: model:ir.model.fields.selection,name:sms_mobile_api_call.selection__smsmobileapi_conversation__last_event_type__call_incoming
+msgid "Incoming call"
+msgstr "Appel entrant"
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_mobile__permission_call_incoming
+#: model_terms:ir.ui.view,arch_db:sms_mobile_api_call.view_smsmobileapi_activity_search
+msgid "Incoming calls"
+msgstr "Appels entrants"
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_activity__invoice_id
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_business_action_wizard__invoice_id
+#: model:ir.model.fields.selection,name:sms_mobile_api_call.selection__smsmobileapi_send_wizard__message_kind__invoice
+msgid "Invoice"
+msgstr "Facture"
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_config__message_is_follower
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_conversation__message_is_follower
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_support_ticket__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_mobile__is_online
+msgid "Is Online"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_activity__is_read
+msgid "Is Read"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model:ir.model,name:sms_mobile_api_call.model_account_move
+msgid "Journal Entry"
+msgstr "Pièce comptable"
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_document_share__last_access_at
+msgid "Last Access At"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_conversation__last_activity_at
+msgid "Last Activity At"
+msgstr "Dernière activité le"
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_config__last_connection_test_at
+msgid "Last Connection Test At"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_conversation__last_direction
+msgid "Last Direction"
+msgstr "Dernière direction"
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_conversation__last_event_type
+msgid "Last Event Type"
+msgstr "Dernier type d’événement"
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_conversation__last_message_preview
+msgid "Last Message Preview"
+msgstr "Aperçu du dernier message"
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_conversation__last_mobile_id
+msgid "Last Mobile"
+msgstr "Dernier mobile"
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_config__last_permission_refresh_at
+msgid "Last Permission Refresh At"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_mobile__last_seen_at
+msgid "Last Seen At"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_config__last_sync_at
+msgid "Last Sync At"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_config__last_sync_message
+msgid "Last Sync Message"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_config__last_sync_status
+msgid "Last Sync Status"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_activity__write_uid
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_business_action_wizard__write_uid
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_config__write_uid
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_conversation__write_uid
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_document_share__write_uid
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_mobile__write_uid
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_quick_reply__write_uid
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_send_wizard__write_uid
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_support_ticket__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_activity__write_date
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_business_action_wizard__write_date
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_config__write_date
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_conversation__write_date
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_document_share__write_date
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_mobile__write_date
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_quick_reply__write_date
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_send_wizard__write_date
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_support_ticket__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model_terms:ir.ui.view,arch_db:sms_mobile_api_call.view_smsmobileapi_config_form
+msgid "Last refresh"
+msgstr "Dernière actualisation"
+
+#. module: sms_mobile_api_call
+#: model_terms:ir.ui.view,arch_db:sms_mobile_api_call.view_smsmobileapi_conversation_tree
+msgid "Latest activity"
+msgstr "Dernière activité"
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,help:sms_mobile_api_call.field_res_partner__smsmobileapi_mobile_filter_id
+#: model:ir.model.fields,help:sms_mobile_api_call.field_res_users__smsmobileapi_mobile_filter_id
+#: model:ir.model.fields,help:sms_mobile_api_call.field_smsmobileapi_conversation__mobile_filter_id
+msgid "Leave empty to display activity from every connected mobile."
+msgstr ""
+"Laissez vide pour afficher les activités de tous les mobiles connectés."
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,help:sms_mobile_api_call.field_smsmobileapi_send_wizard__mobile_id
+msgid "Leave empty to use the first available connected mobile."
+msgstr "Laissez vide pour utiliser le premier mobile connecté disponible."
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields.selection,name:sms_mobile_api_call.selection__smsmobileapi_business_action_wizard__action_type__link
+msgid "Link an existing document"
+msgstr "Associer un document existant"
+
+#. module: sms_mobile_api_call
+#: model:ir.module.category,description:sms_mobile_api_call.module_category_smsmobileapi
+msgid "Manage SMS and call synchronization through connected mobile gateways."
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model:res.groups,name:sms_mobile_api_call.group_smsmobileapi_manager
+msgid "Manager"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model_terms:ir.ui.view,arch_db:sms_mobile_api_call.view_smsmobileapi_conversation_form
+msgid "Mark all read"
+msgstr "Tout marquer comme lu"
+
+#. module: sms_mobile_api_call
+#: model_terms:ir.ui.view,arch_db:sms_mobile_api_call.view_smsmobileapi_activity_form
+msgid "Mark as read"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_activity__message
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_quick_reply__message
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_send_wizard__message
+#: model_terms:ir.ui.view,arch_db:sms_mobile_api_call.view_smsmobileapi_activity_form
+#: model_terms:ir.ui.view,arch_db:sms_mobile_api_call.view_smsmobileapi_quick_reply_form
+#: model_terms:ir.ui.view,arch_db:sms_mobile_api_call.view_smsmobileapi_send_wizard_form
+msgid "Message"
+msgstr "Message"
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_config__message_has_error
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_conversation__message_has_error
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_support_ticket__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_send_wizard__message_kind
+msgid "Message Kind"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_conversation__message_search
+msgid "Message content"
+msgstr "Contenu du message"
+
+#. module: sms_mobile_api_call
+#: model:smsmobileapi.quick.reply,name:sms_mobile_api_call.quick_reply_received
+msgid "Message received"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_config__message_ids
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_conversation__message_ids
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_support_ticket__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields.selection,name:sms_mobile_api_call.selection__smsmobileapi_activity__status__missed
+msgid "Missed"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields.selection,name:sms_mobile_api_call.selection__smsmobileapi_activity__event_type__call_missed
+#: model:ir.model.fields.selection,name:sms_mobile_api_call.selection__smsmobileapi_conversation__last_event_type__call_missed
+msgid "Missed call"
+msgstr "Appel manqué"
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_mobile__permission_call_missed
+#: model_terms:ir.ui.view,arch_db:sms_mobile_api_call.view_smsmobileapi_activity_search
+msgid "Missed calls"
+msgstr "Appels manqués"
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_activity__mobile_id
+#: model_terms:ir.ui.view,arch_db:sms_mobile_api_call.view_smsmobileapi_activity_search
+#: model_terms:ir.ui.view,arch_db:sms_mobile_api_call.view_smsmobileapi_config_form
+#: model_terms:ir.ui.view,arch_db:sms_mobile_api_call.view_smsmobileapi_conversation_search
+msgid "Mobile"
+msgstr "Mobile"
+
+#. module: sms_mobile_api_call
+#: model:ir.actions.act_window,name:sms_mobile_api_call.action_smsmobileapi_support_ticket
+#: model:ir.ui.menu,name:sms_mobile_api_call.menu_smsmobileapi_support
+msgid "Mobile Support Tickets"
+msgstr "Tickets de support mobile"
+
+#. module: sms_mobile_api_call
+#: model_terms:ir.ui.view,arch_db:sms_mobile_api_call.view_smsmobileapi_config_form
+msgid "Mobile access status"
+msgstr "État des accès mobiles"
+
+#. module: sms_mobile_api_call
+#: model_terms:ir.ui.view,arch_db:sms_mobile_api_call.view_partner_form_smsmobileapi
+msgid "Mobile conversation"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#. odoo-python
+#: code:addons/sms_mobile_api_call/models/config.py:0
+#, python-format
+msgid "Mobile permissions refreshed"
+msgstr "Autorisations mobiles actualisées"
+
+#. module: sms_mobile_api_call
+#: model_terms:ir.ui.view,arch_db:sms_mobile_api_call.view_smsmobileapi_config_form
+msgid "Mobile report"
+msgstr "Rapport du mobile"
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_send_wizard__mobile_id
+msgid "Mobile used to send"
+msgstr "Mobile utilisé pour l'envoi"
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_config__my_activity_date_deadline
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_conversation__my_activity_date_deadline
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_support_ticket__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model_terms:ir.ui.view,arch_db:sms_mobile_api_call.view_smsmobileapi_conversation_search
+msgid "My conversations"
+msgstr "Mes conversations"
+
+#. module: sms_mobile_api_call
+#: model_terms:ir.ui.view,arch_db:sms_mobile_api_call.view_smsmobileapi_support_ticket_search
+msgid "My tickets"
+msgstr "Mes tickets"
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_activity__name
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_business_action_wizard__name
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_conversation__name
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_document_share__name
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_mobile__name
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_quick_reply__name
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_support_ticket__name
+msgid "Name"
+msgstr "Nom"
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields.selection,name:sms_mobile_api_call.selection__smsmobileapi_config__connection_state__error
+msgid "Needs attention"
+msgstr "Attention requise"
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields.selection,name:sms_mobile_api_call.selection__smsmobileapi_config__last_sync_status__never
+msgid "Never"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields.selection,name:sms_mobile_api_call.selection__smsmobileapi_conversation__state__new
+#: model:ir.model.fields.selection,name:sms_mobile_api_call.selection__smsmobileapi_support_ticket__state__new
+#: model_terms:ir.ui.view,arch_db:sms_mobile_api_call.view_smsmobileapi_conversation_search
+msgid "New"
+msgstr "Nouveau"
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_config__activity_calendar_event_id
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_conversation__activity_calendar_event_id
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_support_ticket__activity_calendar_event_id
+msgid "Next Activity Calendar Event"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_config__activity_date_deadline
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_conversation__activity_date_deadline
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_support_ticket__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_config__activity_summary
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_conversation__activity_summary
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_support_ticket__activity_summary
+msgid "Next Activity Summary"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_config__activity_type_id
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_conversation__activity_type_id
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_support_ticket__activity_type_id
+msgid "Next Activity Type"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model_terms:ir.actions.act_window,help:sms_mobile_api_call.action_smsmobileapi_mobile
+msgid "No connected mobile has been synchronized yet."
+msgstr ""
+
+#. module: sms_mobile_api_call
+#. odoo-python
+#: code:addons/sms_mobile_api_call/models/config.py:0
+#, python-format
+msgid "No data imported"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#. odoo-python
+#: code:addons/sms_mobile_api_call/models/config.py:0
+#, python-format
+msgid "No permission report yet"
+msgstr "Aucun rapport d’autorisation disponible"
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields.selection,name:sms_mobile_api_call.selection__smsmobileapi_business_action_wizard__priority__0
+#: model:ir.model.fields.selection,name:sms_mobile_api_call.selection__smsmobileapi_conversation__priority__0
+#: model:ir.model.fields.selection,name:sms_mobile_api_call.selection__smsmobileapi_support_ticket__priority__0
+msgid "Normal"
+msgstr "Normal"
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields.selection,name:sms_mobile_api_call.selection__smsmobileapi_mobile__permission_call_incoming__missing
+#: model:ir.model.fields.selection,name:sms_mobile_api_call.selection__smsmobileapi_mobile__permission_call_missed__missing
+#: model:ir.model.fields.selection,name:sms_mobile_api_call.selection__smsmobileapi_mobile__permission_call_outgoing__missing
+#: model:ir.model.fields.selection,name:sms_mobile_api_call.selection__smsmobileapi_mobile__permission_sms_received__missing
+msgid "Not allowed"
+msgstr "Non autorisé"
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields.selection,name:sms_mobile_api_call.selection__smsmobileapi_mobile__permission_call_incoming__unknown
+#: model:ir.model.fields.selection,name:sms_mobile_api_call.selection__smsmobileapi_mobile__permission_call_missed__unknown
+#: model:ir.model.fields.selection,name:sms_mobile_api_call.selection__smsmobileapi_mobile__permission_call_outgoing__unknown
+#: model:ir.model.fields.selection,name:sms_mobile_api_call.selection__smsmobileapi_mobile__permission_sms_received__unknown
+msgid "Not reported"
+msgstr "Non signalé"
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields.selection,name:sms_mobile_api_call.selection__smsmobileapi_config__connection_state__not_tested
+msgid "Not tested"
+msgstr "Non testée"
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_config__message_needaction_counter
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_conversation__message_needaction_counter
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_support_ticket__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_config__message_has_error_counter
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_conversation__message_has_error_counter
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_support_ticket__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,help:sms_mobile_api_call.field_smsmobileapi_config__message_needaction_counter
+#: model:ir.model.fields,help:sms_mobile_api_call.field_smsmobileapi_conversation__message_needaction_counter
+#: model:ir.model.fields,help:sms_mobile_api_call.field_smsmobileapi_support_ticket__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,help:sms_mobile_api_call.field_smsmobileapi_config__message_has_error_counter
+#: model:ir.model.fields,help:sms_mobile_api_call.field_smsmobileapi_conversation__message_has_error_counter
+#: model:ir.model.fields,help:sms_mobile_api_call.field_smsmobileapi_support_ticket__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model_terms:ir.ui.view,arch_db:sms_mobile_api_call.view_smsmobileapi_activity_form
+msgid "Odoo follow-up"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#. odoo-python
+#: code:addons/sms_mobile_api_call/models/config.py:0
+#, python-format
+msgid "Only an SMSMobileAPI manager can change connection secrets."
+msgstr ""
+
+#. module: sms_mobile_api_call
+#. odoo-python
+#: code:addons/sms_mobile_api_call/models/config.py:0
+#, python-format
+msgid "Only an SMSMobileAPI manager can configure the connection."
+msgstr "Seul un responsable SMSMobileAPI peut configurer la connexion."
+
+#. module: sms_mobile_api_call
+#. odoo-python
+#: code:addons/sms_mobile_api_call/models/config.py:0
+#, python-format
+msgid "Only an SMSMobileAPI manager can refresh mobile permissions."
+msgstr ""
+"Seul un responsable SMSMobileAPI peut actualiser les autorisations mobiles."
+
+#. module: sms_mobile_api_call
+#. odoo-python
+#: code:addons/sms_mobile_api_call/models/config.py:0
+#, python-format
+msgid "Only an SMSMobileAPI manager can remove a connection."
+msgstr ""
+
+#. module: sms_mobile_api_call
+#. odoo-python
+#: code:addons/sms_mobile_api_call/models/config.py:0
+#, python-format
+msgid "Only an SMSMobileAPI manager can rotate webhook credentials."
+msgstr ""
+
+#. module: sms_mobile_api_call
+#. odoo-python
+#: code:addons/sms_mobile_api_call/models/config.py:0
+#, python-format
+msgid "Only an SMSMobileAPI manager can test the connection."
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model:ir.model.constraint,message:sms_mobile_api_call.constraint_smsmobileapi_config_company_unique
+msgid "Only one SMSMobileAPI configuration is allowed per company."
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model_terms:ir.ui.view,arch_db:sms_mobile_api_call.view_smsmobileapi_conversation_tree
+#: model_terms:ir.ui.view,arch_db:sms_mobile_api_call.view_smsmobileapi_support_ticket_search
+msgid "Open"
+msgstr "Ouvrir"
+
+#. module: sms_mobile_api_call
+#: model_terms:ir.actions.act_window,help:sms_mobile_api_call.action_smsmobileapi_mobile
+msgid ""
+"Open Configuration, enter the account API key, and test the connection."
+msgstr ""
+
+#. module: sms_mobile_api_call
+#. odoo-python
+#: code:addons/sms_mobile_api_call/models/config.py:0
+#, python-format
+msgid ""
+"Open SMSMobileAPI on the mobile, verify the SMS and call access, then "
+"refresh again."
+msgstr ""
+"Ouvrez SMSMobileAPI sur le mobile, vérifiez les accès aux SMS et aux appels,"
+" puis actualisez à nouveau."
+
+#. module: sms_mobile_api_call
+#: model_terms:ir.ui.view,arch_db:sms_mobile_api_call.view_partner_form_smsmobileapi
+msgid "Open full conversation"
+msgstr "Ouvrir la conversation complète"
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_activity__crm_lead_id
+msgid "Opportunity"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model_terms:ir.ui.view,arch_db:sms_mobile_api_call.view_smsmobileapi_send_wizard_form
+msgid "Optional secure document"
+msgstr "Document sécurisé facultatif"
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields.selection,name:sms_mobile_api_call.selection__smsmobileapi_activity__direction__outgoing
+#: model:ir.model.fields.selection,name:sms_mobile_api_call.selection__smsmobileapi_conversation__last_direction__outgoing
+#: model_terms:ir.ui.view,arch_db:sms_mobile_api_call.view_smsmobileapi_activity_search
+msgid "Outgoing"
+msgstr "Sortant"
+
+#. module: sms_mobile_api_call
+#. odoo-python
+#: code:addons/sms_mobile_api_call/models/activity.py:0
+#, python-format
+msgid "Outgoing SMS"
+msgstr "SMS envoyé"
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields.selection,name:sms_mobile_api_call.selection__smsmobileapi_activity__event_type__call_outgoing
+#: model:ir.model.fields.selection,name:sms_mobile_api_call.selection__smsmobileapi_conversation__last_event_type__call_outgoing
+msgid "Outgoing call"
+msgstr "Appel sortant"
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_mobile__permission_call_outgoing
+#: model_terms:ir.ui.view,arch_db:sms_mobile_api_call.view_smsmobileapi_activity_search
+msgid "Outgoing calls"
+msgstr "Appels sortants"
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields.selection,name:sms_mobile_api_call.selection__smsmobileapi_config__last_sync_status__partial
+msgid "Partial"
+msgstr "Partielle"
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_activity__partner_id
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_document_share__partner_id
+msgid "Partner"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model_terms:ir.ui.view,arch_db:sms_mobile_api_call.view_smsmobileapi_config_form
+msgid "Paste the account API key"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields.selection,name:sms_mobile_api_call.selection__smsmobileapi_send_wizard__message_kind__payment_reminder
+msgid "Payment reminder"
+msgstr "Rappel de paiement"
+
+#. module: sms_mobile_api_call
+#. odoo-python
+#: code:addons/sms_mobile_api_call/models/account_move.py:0
+#, python-format
+msgid "Payment reminders are available only for customer invoices."
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_mobile__permission_checked_at
+msgid "Permissions checked at"
+msgstr "Autorisations vérifiées le"
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_activity__phone_normalized
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_conversation__phone_normalized
+msgid "Phone Normalized"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_activity__phone_number
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_business_action_wizard__phone_number
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_conversation__phone_number
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_mobile__phone_number
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_support_ticket__phone_number
+msgid "Phone Number"
+msgstr "Numéro de téléphone"
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_business_action_wizard__priority
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_conversation__priority
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_support_ticket__priority
+msgid "Priority"
+msgstr "Priorité"
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_business_action_wizard__project_id
+msgid "Project"
+msgstr "Projet"
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields.selection,name:sms_mobile_api_call.selection__smsmobileapi_business_action_wizard__action_type__task
+msgid "Project task"
+msgstr "Tâche de projet"
+
+#. module: sms_mobile_api_call
+#: model:ir.model,name:sms_mobile_api_call.model_purchase_order
+msgid "Purchase Order"
+msgstr "Bon de commande fournisseur"
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields.selection,name:sms_mobile_api_call.selection__smsmobileapi_send_wizard__message_kind__purchase_order
+msgid "Purchase order"
+msgstr "Bon de commande fournisseur"
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields.selection,name:sms_mobile_api_call.selection__smsmobileapi_activity__status__queued
+msgid "Queued"
+msgstr "En attente"
+
+#. module: sms_mobile_api_call
+#: model:ir.actions.act_window,name:sms_mobile_api_call.action_smsmobileapi_quick_reply
+#: model:ir.ui.menu,name:sms_mobile_api_call.menu_smsmobileapi_quick_replies
+msgid "Quick Replies"
+msgstr "Réponses rapides"
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_send_wizard__quick_reply_id
+msgid "Quick reply"
+msgstr "Réponse rapide"
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields.selection,name:sms_mobile_api_call.selection__smsmobileapi_business_action_wizard__action_type__quotation
+msgid "Quotation"
+msgstr "Devis"
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_activity__sale_order_id
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_business_action_wizard__sale_order_id
+#: model:ir.model.fields.selection,name:sms_mobile_api_call.selection__smsmobileapi_send_wizard__message_kind__sale_order
+msgid "Quotation / Sales order"
+msgstr "Devis / commande client"
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_config__rating_ids
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_conversation__rating_ids
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_support_ticket__rating_ids
+msgid "Ratings"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields.selection,name:sms_mobile_api_call.selection__smsmobileapi_activity__status__received
+msgid "Received"
+msgstr "Reçu"
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_mobile__permission_sms_received
+msgid "Received SMS"
+msgstr "SMS reçus"
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_send_wizard__recipient_phone
+msgid "Recipient Phone"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model_terms:ir.ui.view,arch_db:sms_mobile_api_call.view_smsmobileapi_config_form
+msgid "Refresh status"
+msgstr "Actualiser l’état"
+
+#. module: sms_mobile_api_call
+#: model_terms:ir.ui.view,arch_db:sms_mobile_api_call.view_smsmobileapi_activity_form
+msgid "Related document"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model_terms:ir.ui.view,arch_db:sms_mobile_api_call.view_smsmobileapi_conversation_form
+#: model_terms:ir.ui.view,arch_db:sms_mobile_api_call.view_smsmobileapi_support_ticket_form
+msgid "Reopen"
+msgstr "Rouvrir"
+
+#. module: sms_mobile_api_call
+#: model_terms:ir.ui.view,arch_db:sms_mobile_api_call.view_smsmobileapi_activity_tree
+#: model_terms:ir.ui.view,arch_db:sms_mobile_api_call.view_smsmobileapi_conversation_kanban
+msgid "Reply"
+msgstr "Répondre"
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_send_wizard__reply_to_activity_id
+msgid "Reply To Activity"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#. odoo-python
+#: code:addons/sms_mobile_api_call/wizard/send_wizard.py:0
+#: code:addons/sms_mobile_api_call/wizard/send_wizard.py:0
+#: model_terms:ir.ui.view,arch_db:sms_mobile_api_call.view_smsmobileapi_activity_form
+#: model_terms:ir.ui.view,arch_db:sms_mobile_api_call.view_smsmobileapi_conversation_form
+#, python-format
+msgid "Reply by SMS"
+msgstr "Répondre par SMS"
+
+#. module: sms_mobile_api_call
+#: model_terms:ir.ui.view,arch_db:sms_mobile_api_call.view_smsmobileapi_support_ticket_form
+msgid "Request"
+msgstr "Demande"
+
+#. module: sms_mobile_api_call
+#: model:smsmobileapi.quick.reply,name:sms_mobile_api_call.quick_reply_processing
+msgid "Request in progress"
+msgstr "Demande en cours"
+
+#. module: sms_mobile_api_call
+#: model_terms:ir.ui.view,arch_db:sms_mobile_api_call.view_smsmobileapi_conversation_form
+#: model_terms:ir.ui.view,arch_db:sms_mobile_api_call.view_smsmobileapi_support_ticket_form
+msgid "Resolve"
+msgstr "Résoudre"
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields.selection,name:sms_mobile_api_call.selection__smsmobileapi_conversation__state__done
+#: model:ir.model.fields.selection,name:sms_mobile_api_call.selection__smsmobileapi_support_ticket__state__resolved
+#: model_terms:ir.ui.view,arch_db:sms_mobile_api_call.view_smsmobileapi_conversation_search
+msgid "Resolved"
+msgstr "Résolu"
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_config__activity_user_id
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_conversation__activity_user_id
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_support_ticket__activity_user_id
+msgid "Responsible User"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields.selection,name:sms_mobile_api_call.selection__smsmobileapi_activity__event_type__sms
+#: model:ir.model.fields.selection,name:sms_mobile_api_call.selection__smsmobileapi_conversation__last_event_type__sms
+#: model_terms:ir.ui.view,arch_db:sms_mobile_api_call.view_smsmobileapi_activity_search
+msgid "SMS"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model:ir.actions.act_window,name:sms_mobile_api_call.action_smsmobileapi_activity
+msgid "SMS & Call Activity"
+msgstr "Activité SMS et appels"
+
+#. module: sms_mobile_api_call
+#: model_terms:ir.ui.view,arch_db:sms_mobile_api_call.view_partner_form_smsmobileapi
+msgid "SMS & Calls"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_res_partner__smsmobileapi_activity_ids
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_res_users__smsmobileapi_activity_ids
+msgid "SMS & call activity"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model_terms:ir.ui.view,arch_db:sms_mobile_api_call.view_partner_form_smsmobileapi
+msgid "SMS Conversation"
+msgstr "Conversation SMS"
+
+#. module: sms_mobile_api_call
+#: model:ir.actions.act_window,name:sms_mobile_api_call.action_smsmobileapi_conversation
+#: model:ir.ui.menu,name:sms_mobile_api_call.menu_smsmobileapi_conversation
+msgid "SMS Conversations"
+msgstr "Conversations SMS"
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_config__message_has_sms_error
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_conversation__message_has_sms_error
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_support_ticket__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model_terms:ir.ui.view,arch_db:sms_mobile_api_call.view_smsmobileapi_activity_graph
+#: model_terms:ir.ui.view,arch_db:sms_mobile_api_call.view_smsmobileapi_activity_pivot
+msgid "SMS and call activity"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_conversation__event_ids
+msgid "SMS and call timeline"
+msgstr "Chronologie des SMS et appels"
+
+#. module: sms_mobile_api_call
+#: model_terms:ir.ui.view,arch_db:sms_mobile_api_call.view_partner_form_smsmobileapi
+msgid "SMS and calls are matched using the exact international phone number."
+msgstr ""
+
+#. module: sms_mobile_api_call
+#. odoo-python
+#: code:addons/sms_mobile_api_call/models/account_move.py:0
+#, python-format
+msgid ""
+"SMS invoice links are available only for customer invoices and credit notes."
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model_terms:ir.ui.view,arch_db:sms_mobile_api_call.view_move_form_smsmobileapi
+msgid "SMS payment reminder"
+msgstr "Rappel de paiement par SMS"
+
+#. module: sms_mobile_api_call
+#. odoo-python
+#: code:addons/sms_mobile_api_call/wizard/send_wizard.py:0
+#, python-format
+msgid "SMS sending"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#. odoo-python
+#: code:addons/sms_mobile_api_call/wizard/send_wizard.py:0
+#, python-format
+msgid "SMS submitted"
+msgstr "SMS transmis"
+
+#. module: sms_mobile_api_call
+#: model:ir.module.category,name:sms_mobile_api_call.module_category_smsmobileapi
+#: model:ir.ui.menu,name:sms_mobile_api_call.menu_smsmobileapi_root
+#: model_terms:ir.ui.view,arch_db:sms_mobile_api_call.view_smsmobileapi_config_form
+msgid "SMSMobileAPI"
+msgstr "SMSMobileAPI"
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields.selection,name:sms_mobile_api_call.selection__smsmobileapi_activity__source__api
+msgid "SMSMobileAPI API"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model:ir.model,name:sms_mobile_api_call.model_smsmobileapi_activity
+msgid "SMSMobileAPI Activity"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model:ir.model,name:sms_mobile_api_call.model_smsmobileapi_config
+msgid "SMSMobileAPI Configuration"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model:ir.model,name:sms_mobile_api_call.model_smsmobileapi_conversation
+msgid "SMSMobileAPI Conversation"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model:ir.model,name:sms_mobile_api_call.model_smsmobileapi_client
+msgid "SMSMobileAPI HTTP Client"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model:ir.model,name:sms_mobile_api_call.model_smsmobileapi_mobile
+msgid "SMSMobileAPI Mobile Gateway"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model:ir.model,name:sms_mobile_api_call.model_smsmobileapi_quick_reply
+msgid "SMSMobileAPI Quick Reply"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model:ir.model,name:sms_mobile_api_call.model_smsmobileapi_document_share
+msgid "SMSMobileAPI Secure Document Link"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model:ir.model,name:sms_mobile_api_call.model_smsmobileapi_support_ticket
+msgid "SMSMobileAPI Support Ticket"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#. odoo-python
+#: code:addons/sms_mobile_api_call/wizard/business_action_wizard.py:0
+#, python-format
+msgid "SMSMobileAPI activity %(reference)s"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#. odoo-python
+#: code:addons/sms_mobile_api_call/models/api_client.py:0
+#, python-format
+msgid "SMSMobileAPI could not complete %(operation)s (HTTP %(status)s)."
+msgstr ""
+
+#. module: sms_mobile_api_call
+#. odoo-python
+#: code:addons/sms_mobile_api_call/models/api_client.py:0
+#, python-format
+msgid "SMSMobileAPI could not complete %(operation)s."
+msgstr ""
+
+#. module: sms_mobile_api_call
+#. odoo-python
+#: code:addons/sms_mobile_api_call/models/api_client.py:0
+#, python-format
+msgid "SMSMobileAPI could not refresh the mobile permission status."
+msgstr "SMSMobileAPI n’a pas pu actualiser l’état des autorisations mobiles."
+
+#. module: sms_mobile_api_call
+#. odoo-python
+#: code:addons/sms_mobile_api_call/models/api_client.py:0
+#, python-format
+msgid ""
+"SMSMobileAPI rejected the request. Check the account key and configuration."
+msgstr ""
+
+#. module: sms_mobile_api_call
+#. odoo-python
+#: code:addons/sms_mobile_api_call/models/api_client.py:0
+#: code:addons/sms_mobile_api_call/models/api_client.py:0
+#, python-format
+msgid "SMSMobileAPI returned an unexpectedly large response."
+msgstr ""
+
+#. module: sms_mobile_api_call
+#. odoo-python
+#: code:addons/sms_mobile_api_call/models/api_client.py:0
+#: code:addons/sms_mobile_api_call/models/api_client.py:0
+#, python-format
+msgid "SMSMobileAPI returned an unreadable response."
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model:ir.actions.server,name:sms_mobile_api_call.ir_cron_smsmobileapi_sync_ir_actions_server
+msgid "SMSMobileAPI: synchronize SMS and calls"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model:ir.model,name:sms_mobile_api_call.model_sale_order
+msgid "Sales Order"
+msgstr "Bon de commande"
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_send_wizard__send_at
+msgid "Schedule from"
+msgstr "Programmer à partir de"
+
+#. module: sms_mobile_api_call
+#: model_terms:ir.ui.view,arch_db:sms_mobile_api_call.view_smsmobileapi_activity_search
+msgid "Search SMS and calls"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model_terms:ir.ui.view,arch_db:sms_mobile_api_call.view_smsmobileapi_conversation_search
+msgid "Search conversations"
+msgstr "Rechercher des conversations"
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_send_wizard__secure_link_days
+msgid "Secure Link Days"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields.selection,name:sms_mobile_api_call.selection__smsmobileapi_send_wizard__message_kind__document
+msgid "Secure document"
+msgstr "Document sécurisé"
+
+#. module: sms_mobile_api_call
+#. odoo-python
+#: code:addons/sms_mobile_api_call/wizard/business_action_wizard.py:0
+#, python-format
+msgid "Select a quotation, sales order or invoice to link."
+msgstr "Sélectionnez un devis, une commande ou une facture à associer."
+
+#. module: sms_mobile_api_call
+#: model_terms:ir.ui.view,arch_db:sms_mobile_api_call.view_partner_form_smsmobileapi
+#: model_terms:ir.ui.view,arch_db:sms_mobile_api_call.view_smsmobileapi_send_wizard_form
+msgid "Send SMS"
+msgstr "Envoyer le SMS"
+
+#. module: sms_mobile_api_call
+#. odoo-python
+#: code:addons/sms_mobile_api_call/wizard/send_wizard.py:0
+#: model_terms:ir.ui.view,arch_db:sms_mobile_api_call.view_smsmobileapi_send_wizard_form
+#, python-format
+msgid "Send SMS with SMSMobileAPI"
+msgstr "Envoyer un SMS avec SMSMobileAPI"
+
+#. module: sms_mobile_api_call
+#: model:ir.actions.act_window,name:sms_mobile_api_call.action_smsmobileapi_send_wizard
+#: model:ir.ui.menu,name:sms_mobile_api_call.menu_smsmobileapi_send
+msgid "Send an SMS"
+msgstr "Envoyer un SMS"
+
+#. module: sms_mobile_api_call
+#: model:ir.model,name:sms_mobile_api_call.model_smsmobileapi_send_wizard
+msgid "Send an SMS with SMSMobileAPI"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model_terms:ir.ui.view,arch_db:sms_mobile_api_call.purchase_order_form_smsmobileapi
+#: model_terms:ir.ui.view,arch_db:sms_mobile_api_call.view_order_form_smsmobileapi
+msgid "Send by SMS"
+msgstr "Envoyer par SMS"
+
+#. module: sms_mobile_api_call
+#: model_terms:ir.ui.view,arch_db:sms_mobile_api_call.view_smsmobileapi_send_wizard_form
+msgid "Send from your connected mobile"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model_terms:ir.ui.view,arch_db:sms_mobile_api_call.view_move_form_smsmobileapi
+msgid "Send invoice by SMS"
+msgstr "Envoyer la facture par SMS"
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields.selection,name:sms_mobile_api_call.selection__smsmobileapi_activity__status__sent
+#: model:ir.model.fields.selection,name:sms_mobile_api_call.selection__smsmobileapi_send_wizard__state__sent
+msgid "Sent"
+msgstr "Envoyé"
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_send_wizard__sent_activity_id
+msgid "Sent Activity"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields.selection,name:sms_mobile_api_call.selection__smsmobileapi_activity__source__odoo
+msgid "Sent from Odoo"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_quick_reply__sequence
+msgid "Sequence"
+msgstr "Séquence"
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_send_wizard__shorten_urls
+msgid "Shorten Urls"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_mobile__sid
+msgid "Sid"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_res_partner__smsmobileapi_activity_count
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_res_users__smsmobileapi_activity_count
+msgid "Smsmobileapi Activity Count"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_res_partner__smsmobileapi_conversation_count
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_res_users__smsmobileapi_conversation_count
+msgid "Smsmobileapi Conversation Count"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_res_partner__smsmobileapi_mobile_normalized
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_res_users__smsmobileapi_mobile_normalized
+msgid "Smsmobileapi Mobile Normalized"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_res_partner__smsmobileapi_phone_normalized
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_res_users__smsmobileapi_phone_normalized
+msgid "Smsmobileapi Phone Normalized"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_res_partner__smsmobileapi_unread_count
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_res_users__smsmobileapi_unread_count
+msgid "Smsmobileapi Unread Count"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_activity__source
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_send_wizard__source_id
+msgid "Source"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_support_ticket__source_activity_id
+msgid "Source Activity"
+msgstr "Activité source"
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_send_wizard__source_model
+msgid "Source Model"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_send_wizard__source_reference
+msgid "Source Reference"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model_terms:ir.ui.view,arch_db:sms_mobile_api_call.view_smsmobileapi_support_ticket_form
+msgid "Start"
+msgstr "Démarrer"
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_conversation__state
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_send_wizard__state
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_support_ticket__state
+msgid "State"
+msgstr "État"
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_activity__status
+#: model_terms:ir.ui.view,arch_db:sms_mobile_api_call.view_smsmobileapi_activity_search
+#: model_terms:ir.ui.view,arch_db:sms_mobile_api_call.view_smsmobileapi_conversation_search
+msgid "Status"
+msgstr "Statut"
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,help:sms_mobile_api_call.field_smsmobileapi_config__activity_state
+#: model:ir.model.fields,help:sms_mobile_api_call.field_smsmobileapi_conversation__activity_state
+#: model:ir.model.fields,help:sms_mobile_api_call.field_smsmobileapi_support_ticket__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields.selection,name:sms_mobile_api_call.selection__smsmobileapi_config__last_sync_status__ok
+msgid "Successful"
+msgstr "Réussie"
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_activity__support_ticket_id
+#: model:ir.model.fields.selection,name:sms_mobile_api_call.selection__smsmobileapi_business_action_wizard__action_type__support
+msgid "Support ticket"
+msgstr "Ticket de support"
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_config__sync_interval_minutes
+msgid "Sync Interval Minutes"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_config__sync_lookback_days
+msgid "Sync Lookback Days"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#. odoo-python
+#: code:addons/sms_mobile_api_call/models/config.py:0
+#, python-format
+msgid "Synchronization complete"
+msgstr "Synchronisation terminée"
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_activity__project_task_id
+msgid "Task"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model_terms:ir.ui.view,arch_db:sms_mobile_api_call.view_smsmobileapi_config_form
+msgid "Test connection"
+msgstr "Tester la connexion"
+
+#. module: sms_mobile_api_call
+#: model:smsmobileapi.quick.reply,message:sms_mobile_api_call.quick_reply_callback
+msgid "Thank you. I will call you back as soon as possible."
+msgstr ""
+
+#. module: sms_mobile_api_call
+#. odoo-python
+#: code:addons/sms_mobile_api_call/models/config.py:0
+#, python-format
+msgid "The API URL must use HTTPS."
+msgstr "L'URL de l'API doit utiliser HTTPS."
+
+#. module: sms_mobile_api_call
+#. odoo-python
+#: code:addons/sms_mobile_api_call/models/config.py:0
+#, python-format
+msgid "The API base URL cannot contain credentials, parameters or a fragment."
+msgstr ""
+
+#. module: sms_mobile_api_call
+#. odoo-python
+#: code:addons/sms_mobile_api_call/wizard/send_wizard.py:0
+#, python-format
+msgid ""
+"The SMS is queued for the connected mobile. Mobile processing can take a "
+"short time."
+msgstr ""
+"Le SMS est en attente pour le mobile connecté. Son traitement peut prendre "
+"un court instant."
+
+#. module: sms_mobile_api_call
+#. odoo-python
+#: code:addons/sms_mobile_api_call/models/config.py:0
+#, python-format
+msgid "The SMSMobileAPI production endpoint cannot be changed."
+msgstr "L’endpoint de production SMSMobileAPI ne peut pas être modifié."
+
+#. module: sms_mobile_api_call
+#. odoo-python
+#: code:addons/sms_mobile_api_call/wizard/send_wizard.py:0
+#, python-format
+msgid "The encoded document is too large. Upload a file smaller than 10 MB."
+msgstr ""
+
+#. module: sms_mobile_api_call
+#. odoo-python
+#: code:addons/sms_mobile_api_call/wizard/send_wizard.py:0
+#, python-format
+msgid "The message cannot exceed 5,000 characters."
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model_terms:ir.ui.view,arch_db:sms_mobile_api_call.view_smsmobileapi_send_wizard_form
+msgid ""
+"The recipient sees the number of the mobile selected below. Leave it empty "
+"to use the first available gateway."
+msgstr ""
+
+#. module: sms_mobile_api_call
+#. odoo-python
+#: code:addons/sms_mobile_api_call/wizard/send_wizard.py:0
+#, python-format
+msgid "The scheduled date must be in the future."
+msgstr "La date programmée doit être dans le futur."
+
+#. module: sms_mobile_api_call
+#: model:ir.model.constraint,message:sms_mobile_api_call.constraint_smsmobileapi_document_share_token_digest_unique
+msgid "The secure document token must be unique."
+msgstr ""
+
+#. module: sms_mobile_api_call
+#. odoo-python
+#: code:addons/sms_mobile_api_call/wizard/business_action_wizard.py:0
+#, python-format
+msgid "The selected activity belongs to another company."
+msgstr ""
+
+#. module: sms_mobile_api_call
+#. odoo-python
+#: code:addons/sms_mobile_api_call/wizard/send_wizard.py:0
+#, python-format
+msgid "The selected mobile does not belong to this company."
+msgstr ""
+
+#. module: sms_mobile_api_call
+#. odoo-python
+#: code:addons/sms_mobile_api_call/models/config.py:0
+#, python-format
+msgid "The synchronization interval must be between 2 and 1,440 minutes."
+msgstr ""
+
+#. module: sms_mobile_api_call
+#. odoo-python
+#: code:addons/sms_mobile_api_call/models/config.py:0
+#, python-format
+msgid "The synchronization window must be between 1 and 7 days."
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model_terms:ir.ui.view,arch_db:sms_mobile_api_call.view_smsmobileapi_conversation_form
+msgid ""
+"The timeline is filtered by the selected mobile. Clear the field to display "
+"every event."
+msgstr ""
+"La chronologie est filtrée par le mobile sélectionné. Effacez le champ pour "
+"afficher tous les événements."
+
+#. module: sms_mobile_api_call
+#. odoo-python
+#: code:addons/sms_mobile_api_call/wizard/send_wizard.py:0
+#, python-format
+msgid "This SMS has already been submitted."
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model:ir.model.constraint,message:sms_mobile_api_call.constraint_smsmobileapi_activity_company_external_ref_unique
+msgid "This SMS or call activity has already been imported."
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model:ir.model.constraint,message:sms_mobile_api_call.constraint_smsmobileapi_mobile_company_sid_unique
+msgid "This mobile is already registered for the company."
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_document_share__token_digest
+msgid "Token Digest"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model_terms:ir.ui.view,arch_db:sms_mobile_api_call.view_smsmobileapi_business_action_wizard_form
+msgid "Turn this mobile event into work"
+msgstr "Transformer cet événement mobile en action"
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,help:sms_mobile_api_call.field_smsmobileapi_config__activity_exception_decoration
+#: model:ir.model.fields,help:sms_mobile_api_call.field_smsmobileapi_conversation__activity_exception_decoration
+#: model:ir.model.fields,help:sms_mobile_api_call.field_smsmobileapi_support_ticket__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model_terms:ir.ui.view,arch_db:sms_mobile_api_call.view_smsmobileapi_conversation_kanban
+#: model_terms:ir.ui.view,arch_db:sms_mobile_api_call.view_smsmobileapi_conversation_search
+msgid "Unassigned"
+msgstr "Non attribuées"
+
+#. module: sms_mobile_api_call
+#: model_terms:ir.ui.view,arch_db:sms_mobile_api_call.view_partner_form_smsmobileapi
+#: model_terms:ir.ui.view,arch_db:sms_mobile_api_call.view_smsmobileapi_activity_search
+#: model_terms:ir.ui.view,arch_db:sms_mobile_api_call.view_smsmobileapi_conversation_form
+#: model_terms:ir.ui.view,arch_db:sms_mobile_api_call.view_smsmobileapi_conversation_search
+#: model_terms:ir.ui.view,arch_db:sms_mobile_api_call.view_smsmobileapi_conversation_tree
+msgid "Unread"
+msgstr "Non lus"
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_conversation__unread_count
+msgid "Unread Count"
+msgstr "Nombre de non-lus"
+
+#. module: sms_mobile_api_call
+#. odoo-python
+#: code:addons/sms_mobile_api_call/models/config.py:0
+#, python-format
+msgid "Update the destination in SMSMobileAPI before enabling the webhook."
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_send_wizard__upload_filename
+msgid "Upload Filename"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields.selection,name:sms_mobile_api_call.selection__smsmobileapi_business_action_wizard__priority__2
+#: model:ir.model.fields.selection,name:sms_mobile_api_call.selection__smsmobileapi_conversation__priority__2
+#: model:ir.model.fields.selection,name:sms_mobile_api_call.selection__smsmobileapi_support_ticket__priority__2
+#: model_terms:ir.ui.view,arch_db:sms_mobile_api_call.view_smsmobileapi_support_ticket_search
+msgid "Urgent"
+msgstr "Urgent"
+
+#. module: sms_mobile_api_call
+#: model:res.groups,name:sms_mobile_api_call.group_smsmobileapi_user
+msgid "User"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_config__webhook_enabled
+msgid "Webhook Enabled"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_config__webhook_path_token
+msgid "Webhook Path Token"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_config__webhook_signing_secret
+msgid "Webhook Signing Secret"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_config__webhook_url
+msgid "Webhook Url"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields.selection,name:sms_mobile_api_call.selection__smsmobileapi_activity__source__webhook
+msgid "Webhook V2"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#. odoo-python
+#: code:addons/sms_mobile_api_call/models/config.py:0
+#, python-format
+msgid "Webhook credentials rotated"
+msgstr "Identifiants du webhook renouvelés"
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_config__website_message_ids
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_conversation__website_message_ids
+#: model:ir.model.fields,field_description:sms_mobile_api_call.field_smsmobileapi_support_ticket__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model:ir.model.fields,help:sms_mobile_api_call.field_smsmobileapi_config__website_message_ids
+#: model:ir.model.fields,help:sms_mobile_api_call.field_smsmobileapi_conversation__website_message_ids
+#: model:ir.model.fields,help:sms_mobile_api_call.field_smsmobileapi_support_ticket__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model_terms:ir.ui.view,arch_db:sms_mobile_api_call.view_smsmobileapi_send_wizard_form
+msgid "Write the SMS message…"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model_terms:ir.ui.view,arch_db:sms_mobile_api_call.view_smsmobileapi_quick_reply_form
+msgid "Write the reusable SMS text…"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#. odoo-python
+#: code:addons/sms_mobile_api_call/models/document_share.py:0
+#, python-format
+msgid "You are not allowed to create SMS document links."
+msgstr ""
+
+#. module: sms_mobile_api_call
+#. odoo-python
+#: code:addons/sms_mobile_api_call/wizard/business_action_wizard.py:0
+#, python-format
+msgid "You are not allowed to create actions from mobile activity."
+msgstr ""
+
+#. module: sms_mobile_api_call
+#. odoo-python
+#: code:addons/sms_mobile_api_call/models/activity.py:0
+#, python-format
+msgid "You are not allowed to manage SMS and call activity."
+msgstr ""
+
+#. module: sms_mobile_api_call
+#. odoo-python
+#: code:addons/sms_mobile_api_call/models/conversation.py:0
+#, python-format
+msgid "You are not allowed to manage SMS conversations."
+msgstr ""
+
+#. module: sms_mobile_api_call
+#. odoo-python
+#: code:addons/sms_mobile_api_call/models/account_move.py:0
+#: code:addons/sms_mobile_api_call/models/purchase_order.py:0
+#: code:addons/sms_mobile_api_call/models/res_partner.py:0
+#: code:addons/sms_mobile_api_call/models/sale_order.py:0
+#: code:addons/sms_mobile_api_call/wizard/send_wizard.py:0
+#: code:addons/sms_mobile_api_call/wizard/send_wizard.py:0
+#, python-format
+msgid "You are not allowed to send SMS."
+msgstr "Vous n'êtes pas autorisé à envoyer des SMS."
+
+#. module: sms_mobile_api_call
+#. odoo-python
+#: code:addons/sms_mobile_api_call/models/config.py:0
+#, python-format
+msgid "You are not allowed to synchronize SMSMobileAPI."
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model_terms:ir.actions.act_window,help:sms_mobile_api_call.action_smsmobileapi_activity
+msgid "Your mobile communication timeline will appear here."
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model:smsmobileapi.quick.reply,message:sms_mobile_api_call.quick_reply_processing
+msgid "Your request is being processed. I will keep you informed."
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model_terms:ir.actions.act_window,help:sms_mobile_api_call.action_smsmobileapi_conversation
+msgid "Your shared SMS inbox is ready."
+msgstr "Votre boîte de réception SMS partagée est prête."
+
+#. module: sms_mobile_api_call
+#. odoo-python
+#: code:addons/sms_mobile_api_call/models/config.py:0
+#, python-format
+msgid "connection test"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#. odoo-python
+#: code:addons/sms_mobile_api_call/models/activity.py:0
+#, python-format
+msgid "incoming call synchronization"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#. odoo-python
+#: code:addons/sms_mobile_api_call/models/activity.py:0
+#, python-format
+msgid "missed call synchronization"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#. odoo-python
+#: code:addons/sms_mobile_api_call/models/api_client.py:0
+#, python-format
+msgid "mobile permission refresh"
+msgstr "l’actualisation des autorisations mobiles"
+
+#. module: sms_mobile_api_call
+#. odoo-python
+#: code:addons/sms_mobile_api_call/models/config.py:0
+#, python-format
+msgid "mobile synchronization"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#. odoo-python
+#: code:addons/sms_mobile_api_call/models/activity.py:0
+#, python-format
+msgid "mobile-sent SMS synchronization"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#. odoo-python
+#: code:addons/sms_mobile_api_call/models/config.py:0
+#, python-format
+msgid "mobiles"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#. odoo-python
+#: code:addons/sms_mobile_api_call/wizard/send_wizard.py:0
+#, python-format
+msgid "order"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#. odoo-python
+#: code:addons/sms_mobile_api_call/models/activity.py:0
+#, python-format
+msgid "outgoing call synchronization"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#. odoo-python
+#: code:addons/sms_mobile_api_call/wizard/send_wizard.py:0
+#, python-format
+msgid "quotation"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#. odoo-python
+#: code:addons/sms_mobile_api_call/models/activity.py:0
+#, python-format
+msgid "received SMS synchronization"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model_terms:ir.ui.view,arch_db:sms_mobile_api_call.view_partner_form_smsmobileapi
+#: model_terms:ir.ui.view,arch_db:sms_mobile_api_call.view_smsmobileapi_conversation_form
+msgid "seconds"
+msgstr "secondes"
+
+#. module: sms_mobile_api_call
+#. odoo-python
+#: code:addons/sms_mobile_api_call/models/activity.py:0
+#, python-format
+msgid "sent SMS synchronization"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#. odoo-python
+#: code:addons/sms_mobile_api_call/wizard/send_wizard.py:0
+#, python-format
+msgid "the due date"
+msgstr ""
+
+#. module: sms_mobile_api_call
+#: model_terms:ir.ui.view,arch_db:sms_mobile_api_call.view_smsmobileapi_conversation_kanban
+msgid "unread"
+msgstr "non lu(s)"

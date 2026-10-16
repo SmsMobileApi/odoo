@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_smsmobileapi_mobile_tree" model="ir.ui.view">
+        <field name="name">smsmobileapi.mobile.tree</field>
+        <field name="model">smsmobileapi.mobile</field>
+        <field name="arch" type="xml">
+            <tree create="false" decoration-success="is_online" decoration-muted="not active">
+                <field name="name"/>
+                <field name="phone_number"/>
+                <field name="sid" groups="sms_mobile_api_call.group_smsmobileapi_manager"/>
+                <field name="is_online" widget="boolean_toggle"/>
+                <field name="app_version"/>
+                <field name="battery_level" widget="progressbar"/>
+                <field name="active" optional="hide"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_smsmobileapi_mobile_form" model="ir.ui.view">
+        <field name="name">smsmobileapi.mobile.form</field>
+        <field name="model">smsmobileapi.mobile</field>
+        <field name="arch" type="xml">
+            <form create="false">
+                <sheet>
+                    <div class="oe_title"><h1><field name="name"/></h1></div>
+                    <group>
+                        <group>
+                            <field name="phone_number"/>
+                            <field name="sid" groups="sms_mobile_api_call.group_smsmobileapi_manager"/>
+                            <field name="is_online"/>
+                        </group>
+                        <group>
+                            <field name="app_version"/>
+                            <field name="battery_level"/>
+                            <field name="active"/>
+                            <field name="company_id" groups="base.group_multi_company"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_smsmobileapi_mobile" model="ir.actions.act_window">
+        <field name="name">Connected Mobiles</field>
+        <field name="res_model">smsmobileapi.mobile</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">No connected mobile has been synchronized yet.</p>
+            <p>Open Configuration, enter the account API key, and test the connection.</p>
+        </field>
+    </record>
+</odoo>

@@ -1,6 +1,0 @@
-id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_sms_mobile_api,manage_sms_mobile_api,sms_mobile_api.model_sms_mobile_api,,1,1,1,1
-access_sms_mobile_api_send_sms_wizard,access.sms_mobile_api.send_sms.wizard,model_sms_mobile_api_send_sms_wizard,base.group_user,1,0,0,0
-access_send_sms_wizard,sms_mobile_api.send_sms_wizard,model_sms_mobile_api_send_sms_wizard,,1,1,1,1
-access_send_invoice_sms_wizard,access.send.invoice.sms.wizard,model_sms_mobile_api_send_invoice_sms_wizard,base.group_user,1,1,1,1
-access_sms_log_user,sms.mobile.api.log user,model_sms_mobile_api_log,base.group_user,1,1,1,1

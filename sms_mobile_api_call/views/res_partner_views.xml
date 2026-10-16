@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_partner_form_smsmobileapi" model="ir.ui.view">
+        <field name="name">res.partner.form.smsmobileapi</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[@name='button_box']" position="inside">
+                <button name="action_smsmobileapi_view_activity" type="object" class="oe_stat_button" icon="fa-comments" groups="sms_mobile_api_call.group_smsmobileapi_user">
+                    <field name="smsmobileapi_activity_count" widget="statinfo" string="SMS &amp; Calls"/>
+                </button>
+                <button name="action_smsmobileapi_open_conversations" type="object" class="oe_stat_button" icon="fa-inbox" groups="sms_mobile_api_call.group_smsmobileapi_user">
+                    <field name="smsmobileapi_unread_count" widget="statinfo" string="Unread"/>
+                </button>
+            </xpath>
+            <xpath expr="//form/sheet" position="before">
+                <header>
+                    <button name="action_smsmobileapi_send_sms" type="object" string="Send SMS" class="oe_highlight" icon="fa-paper-plane" groups="sms_mobile_api_call.group_smsmobileapi_user"/>
+                </header>
+            </xpath>
+            <xpath expr="//notebook" position="inside">
+                <page string="SMS Conversation" name="smsmobileapi_activity" groups="sms_mobile_api_call.group_smsmobileapi_user">
+                    <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-3">
+                        <div>
+                            <h3 class="mb-1">Mobile conversation</h3>
+                            <p class="text-muted mb-0">SMS and calls are matched using the exact international phone number.</p>
+                        </div>
+                        <div class="d-flex align-items-center gap-2">
+                            <field name="smsmobileapi_mobile_filter_id" class="oe_inline" options="{'no_create': True}" placeholder="All mobiles"/>
+                            <button name="action_smsmobileapi_open_conversations" type="object" string="Open full conversation" class="btn-primary" icon="fa-expand"/>
+                        </div>
+                    </div>
+                    <field name="smsmobileapi_filtered_activity_ids" readonly="1" nolabel="1">
+                        <kanban create="false" delete="false" default_order="activity_at asc" class="o_smsmobileapi_thread">
+                            <field name="activity_at"/>
+                            <field name="event_type"/>
+                            <field name="direction"/>
+                            <field name="message"/>
+                            <field name="duration_seconds"/>
+                            <field name="status"/>
+                            <field name="mobile_id"/>
+                            <templates>
+                                <t t-name="kanban-box">
+                                    <div t-attf-class="o_smsmobileapi_bubble {{ record.direction.raw_value === 'outgoing' ? 'o_smsmobileapi_outgoing' : 'o_smsmobileapi_incoming' }}">
+                                        <div class="d-flex justify-content-between gap-3 mb-1">
+                                            <strong><field name="event_type"/></strong>
+                                            <span class="text-muted small"><field name="activity_at"/></span>
+                                        </div>
+                                        <div t-if="record.event_type.raw_value === 'sms'" class="o_smsmobileapi_message_text"><field name="message"/></div>
+                                        <div t-else="" class="text-muted">Call activity <span t-if="record.duration_seconds.raw_value">— <field name="duration_seconds"/> seconds</span></div>
+                                        <div class="d-flex justify-content-between align-items-center gap-2 mt-2">
+                                            <div class="small text-muted">
+                                                <field name="status" widget="badge"/>
+                                                <span t-if="record.mobile_id.raw_value" class="ms-2"><i class="fa fa-mobile" title="Mobile used"/> <field name="mobile_id"/></span>
+                                            </div>
+                                            <div class="d-flex gap-1">
+                                                <button t-if="record.event_type.raw_value === 'sms' and record.direction.raw_value === 'incoming'" name="action_reply" type="object" class="btn btn-sm btn-primary"><i class="fa fa-reply"/> Reply</button>
+                                                <button t-if="record.direction.raw_value === 'incoming'" name="action_create_business_action" type="object" class="btn btn-sm btn-outline-secondary"><i class="fa fa-bolt"/> Action</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </t>
+                            </templates>
+                        </kanban>
+                    </field>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>

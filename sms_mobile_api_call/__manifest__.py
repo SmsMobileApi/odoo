@@ -1,0 +1,66 @@
+{
+    "name": "SMSMobileAPI SMS & Calls",
+    "summary": "Send SMS from your own mobile and synchronize SMS and call activity",
+    "version": "17.0.1.2.2",
+    "category": "Productivity/Discuss",
+    "author": "SMSMobileAPI",
+    "maintainer": "SMSMobileAPI",
+    "support": "support@smsmobileapi.com",
+    "website": "https://smsmobileapi.com/odoo/",
+    "license": "LGPL-3",
+    "description": """
+Connect Odoo to a mobile registered with SMSMobileAPI. Send SMS from contacts
+and business documents, synchronize received and sent SMS, and attach missed,
+incoming and outgoing call metadata to the matching contact. The module uses
+the external api.smsmobileapi.com service and requires explicit administrator
+consent before any data is transmitted or retrieved.
+""",
+    "depends": [
+        "base",
+        "web",
+        "mail",
+        "contacts",
+        "phone_validation",
+        "sms",
+        "portal",
+        "account",
+        "crm",
+        "project",
+        "sale_management",
+        "purchase",
+    ],
+    "data": [
+        "security/security.xml",
+        "security/ir.model.access.csv",
+        "data/ir_cron.xml",
+        "data/quick_reply_data.xml",
+        "views/conversation_views.xml",
+        "views/quick_reply_views.xml",
+        "views/support_ticket_views.xml",
+        "views/activity_views.xml",
+        "views/mobile_views.xml",
+        "views/config_views.xml",
+        "views/res_partner_views.xml",
+        "views/business_document_views.xml",
+        "wizard/send_wizard_views.xml",
+        "wizard/business_action_wizard_views.xml",
+        "views/menu_views.xml",
+    ],
+    "assets": {
+        "web.assets_backend": [
+            "sms_mobile_api_call/static/src/scss/smsmobileapi.scss",
+        ],
+    },
+    "images": [
+        "static/description/banner.png",
+        "static/description/screenshot_contact.png",
+        "static/description/screenshot_conversation.png",
+        "static/description/screenshot_inbox.png",
+        "static/description/screenshot_actions.png",
+        "static/description/screenshot_configuration.png",
+        "static/description/screenshot_calls.png",
+    ],
+    "application": True,
+    "installable": True,
+    "auto_install": False,
+}

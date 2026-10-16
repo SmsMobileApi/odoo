@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_smsmobileapi_config_tree" model="ir.ui.view">
+        <field name="name">smsmobileapi.config.tree</field>
+        <field name="model">smsmobileapi.config</field>
+        <field name="arch" type="xml">
+            <tree decoration-success="connection_state == 'connected'" decoration-danger="connection_state == 'error'">
+                <field name="company_id"/>
+                <field name="connection_state" widget="badge"/>
+                <field name="last_sync_at"/>
+                <field name="last_sync_status" widget="badge"/>
+                <field name="default_mobile_id"/>
+                <field name="active" widget="boolean_toggle"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_smsmobileapi_config_form" model="ir.ui.view">
+        <field name="name">smsmobileapi.config.form</field>
+        <field name="model">smsmobileapi.config</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="action_test_connection" type="object" string="Test connection" class="oe_highlight" invisible="not external_data_consent"/>
+                    <button name="action_sync_now" type="object" string="Synchronize now" invisible="not external_data_consent"/>
+                    <field name="connection_state" widget="statusbar" statusbar_visible="not_tested,connected,error"/>
+                </header>
+                <sheet>
+                    <field name="company_id" invisible="1"/>
+                    <div class="oe_title">
+                        <h1>SMSMobileAPI</h1>
+                    </div>
+                    <div class="smsmobileapi_required_consent" role="region">
+                        <div class="d-flex align-items-start gap-3">
+                            <div class="smsmobileapi_consent_checkbox">
+                                <field name="external_data_consent" nolabel="1"/>
+                            </div>
+                            <div class="flex-grow-1">
+                                <label for="external_data_consent" string="I authorize the SMSMobileAPI data exchange" class="smsmobileapi_consent_label"/>
+                                <p class="smsmobileapi_consent_required mb-1" invisible="external_data_consent">
+                                    <i class="fa fa-exclamation-circle me-1"/>
+                                    Required: tick the checkbox, then save this configuration before using SMSMobileAPI.
+                                </p>
+                                <p class="smsmobileapi_consent_accepted mb-1" invisible="not external_data_consent">
+                                    <i class="fa fa-check-circle me-1"/>
+                                    Authorization accepted. You can now use the enabled SMS and call features.
+                                </p>
+                                <p class="text-muted mb-0">
+                                    You remain in control: clearing this checkbox immediately stops automatic synchronization and webhook ingestion.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="alert alert-warning" role="alert" invisible="external_data_consent">
+                        <h4 class="mb-2"><i class="fa fa-shield me-2"/>Your authorization is required before any data exchange</h4>
+                        <p>
+                            SMSMobileAPI connects Odoo to <strong>api.smsmobileapi.com</strong> over HTTPS.
+                            To send an SMS, Odoo transmits your account API key, the recipient phone number,
+                            the SMS text, the selected mobile identifier and the requested send options.
+                        </p>
+                        <p>
+                            For the channels you enable, Odoo retrieves and stores SMS text, correspondent phone
+                            numbers, message direction, delivery state and timestamps; call-log metadata such as
+                            missed, incoming or outgoing type, phone number, time and duration; and connected-mobile
+                            identifiers, status and permission state. <strong>No call audio is accessed or transferred.</strong>
+                        </p>
+                        <p class="mb-0">
+                            This exchange is used only to send SMS from your connected phone and synchronize the
+                            mobile activity you choose into Odoo. You need a SMSMobileAPI account and the official
+                            mobile application. You can select individual synchronization channels or withdraw your
+                            authorization at any time. See the
+                            <a class="alert-link" href="https://smsmobileapi.com/privacy-policy/" target="_blank" rel="noopener noreferrer">SMSMobileAPI privacy policy</a>.
+                        </p>
+                    </div>
+                    <div class="alert alert-success" role="alert" invisible="not external_data_consent">
+                        <strong><i class="fa fa-check-circle me-2"/>Data exchange authorized.</strong>
+                        Only the channels selected below are synchronized. Clear the authorization checkbox to stop automatic synchronization and webhook ingestion.
+                    </div>
+
+                    <group string="Authorization record" invisible="not external_data_consent">
+                        <group>
+                            <field name="external_data_consent_at" readonly="1"/>
+                            <field name="external_data_consent_user_id" readonly="1"/>
+                            <field name="external_data_consent_version" readonly="1"/>
+                        </group>
+                    </group>
+
+                    <group string="Secure connection">
+                        <field name="api_key" string="API key" password="True" placeholder="Paste the account API key"/>
+                        <field name="default_mobile_id" options="{'no_create': True}" invisible="not external_data_consent"/>
+                    </group>
+
+                    <notebook invisible="not external_data_consent">
+                        <page string="Synchronization" name="synchronization">
+                            <div class="alert alert-info" role="alert">
+                                Choose exactly which activity Odoo may retrieve. Incoming SMS and call-log access must also be enabled in the SMSMobileAPI mobile application.
+                            </div>
+                            <group>
+                                <group string="SMS channels">
+                                    <field name="import_received_sms"/>
+                                    <field name="import_api_sent_sms"/>
+                                    <field name="import_mobile_sent_sms"/>
+                                </group>
+                                <group string="Call-log channels">
+                                    <field name="import_missed_calls"/>
+                                    <field name="import_incoming_calls"/>
+                                    <field name="import_outgoing_calls"/>
+                                </group>
+                            </group>
+                            <group string="Automatic synchronization">
+                                <field name="auto_sync"/>
+                                <field name="sync_interval_minutes" invisible="not auto_sync"/>
+                                <field name="sync_lookback_days" invisible="not auto_sync"/>
+                                <field name="last_sync_at" readonly="1"/>
+                                <field name="last_sync_status" readonly="1"/>
+                                <field name="last_sync_message" readonly="1"/>
+                            </group>
+                        </page>
+                        <page string="Mobile access status" name="mobile_access">
+                            <div class="alert alert-info" role="alert">
+                                <strong>Check access granted on each mobile.</strong>
+                                Open SMSMobileAPI on the phone to change SMS or call access, then use Refresh status below. This check retrieves only permission states and mobile metadata, never SMS text, correspondent numbers, contacts or call content.
+                            </div>
+                            <group>
+                                <button name="action_refresh_mobile_permissions" type="object" string="Refresh status" icon="fa-refresh" class="oe_highlight"/>
+                                <field name="last_permission_refresh_at" string="Last refresh" readonly="1"/>
+                            </group>
+                            <field name="mobile_ids" nolabel="1" readonly="1">
+                                <tree create="0" edit="0" delete="0" decoration-muted="not active">
+                                    <field name="name" string="Mobile"/>
+                                    <field name="is_online" widget="boolean_toggle"/>
+                                    <field name="permission_sms_received" widget="badge" decoration-success="permission_sms_received == 'granted'" decoration-danger="permission_sms_received == 'missing'" decoration-warning="permission_sms_received == 'unknown'"/>
+                                    <field name="permission_call_missed" widget="badge" decoration-success="permission_call_missed == 'granted'" decoration-danger="permission_call_missed == 'missing'" decoration-warning="permission_call_missed == 'unknown'"/>
+                                    <field name="permission_call_incoming" widget="badge" decoration-success="permission_call_incoming == 'granted'" decoration-danger="permission_call_incoming == 'missing'" decoration-warning="permission_call_incoming == 'unknown'"/>
+                                    <field name="permission_call_outgoing" widget="badge" decoration-success="permission_call_outgoing == 'granted'" decoration-danger="permission_call_outgoing == 'missing'" decoration-warning="permission_call_outgoing == 'unknown'"/>
+                                    <field name="permission_checked_at" string="Mobile report"/>
+                                    <field name="app_version" optional="show"/>
+                                    <field name="active" column_invisible="True"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids"/>
+                    <field name="activity_ids"/>
+                    <field name="message_ids"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_smsmobileapi_config" model="ir.actions.act_window">
+        <field name="name">Configuration</field>
+        <field name="res_model">smsmobileapi.config</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">Connect your SMSMobileAPI account.</p>
+            <p>Review the data disclosure, give your explicit consent, enter the account API key and test the connection.</p>
+        </field>
+    </record>
+
+    <record id="action_smsmobileapi_home_guard" model="ir.actions.server">
+        <field name="name">SMSMobileAPI</field>
+        <field name="model_id" ref="model_smsmobileapi_config"/>
+        <field name="state">code</field>
+        <field name="code">action = model.action_open_smsmobileapi_menu()</field>
+    </record>
+    <record id="action_smsmobileapi_conversation_guard" model="ir.actions.server">
+        <field name="name">SMS Conversations</field>
+        <field name="model_id" ref="model_smsmobileapi_config"/>
+        <field name="state">code</field>
+        <field name="code">action = model.action_open_smsmobileapi_menu('sms_mobile_api_call.action_smsmobileapi_conversation')</field>
+    </record>
+    <record id="action_smsmobileapi_send_guard" model="ir.actions.server">
+        <field name="name">Send an SMS</field>
+        <field name="model_id" ref="model_smsmobileapi_config"/>
+        <field name="state">code</field>
+        <field name="code">action = model.action_open_smsmobileapi_menu('sms_mobile_api_call.action_smsmobileapi_send_wizard')</field>
+    </record>
+    <record id="action_smsmobileapi_activity_guard" model="ir.actions.server">
+        <field name="name">Complete Activity History</field>
+        <field name="model_id" ref="model_smsmobileapi_config"/>
+        <field name="state">code</field>
+        <field name="code">action = model.action_open_smsmobileapi_menu('sms_mobile_api_call.action_smsmobileapi_activity')</field>
+    </record>
+    <record id="action_smsmobileapi_support_guard" model="ir.actions.server">
+        <field name="name">Mobile Support Tickets</field>
+        <field name="model_id" ref="model_smsmobileapi_config"/>
+        <field name="state">code</field>
+        <field name="code">action = model.action_open_smsmobileapi_menu('sms_mobile_api_call.action_smsmobileapi_support_ticket')</field>
+    </record>
+    <record id="action_smsmobileapi_contacts_guard" model="ir.actions.server">
+        <field name="name">Contacts</field>
+        <field name="model_id" ref="model_smsmobileapi_config"/>
+        <field name="state">code</field>
+        <field name="code">action = model.action_open_smsmobileapi_menu('contacts.action_contacts')</field>
+    </record>
+    <record id="action_smsmobileapi_mobiles_guard" model="ir.actions.server">
+        <field name="name">Connected Mobiles</field>
+        <field name="model_id" ref="model_smsmobileapi_config"/>
+        <field name="state">code</field>
+        <field name="code">action = model.action_open_smsmobileapi_menu('sms_mobile_api_call.action_smsmobileapi_mobile')</field>
+    </record>
+    <record id="action_smsmobileapi_quick_replies_guard" model="ir.actions.server">
+        <field name="name">Quick Replies</field>
+        <field name="model_id" ref="model_smsmobileapi_config"/>
+        <field name="state">code</field>
+        <field name="code">action = model.action_open_smsmobileapi_menu('sms_mobile_api_call.action_smsmobileapi_quick_reply')</field>
+    </record>
+</odoo>

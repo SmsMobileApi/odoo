@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="module_category_smsmobileapi" model="ir.module.category">
+        <field name="name">SMSMobileAPI</field>
+        <field name="description">Manage SMS and call synchronization through connected mobile gateways.</field>
+        <field name="sequence">35</field>
+    </record>
+
+    <record id="group_smsmobileapi_user" model="res.groups">
+        <field name="name">User</field>
+        <field name="category_id" ref="sms_mobile_api_call.module_category_smsmobileapi"/>
+        <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+    </record>
+
+    <record id="group_smsmobileapi_manager" model="res.groups">
+        <field name="name">Manager</field>
+        <field name="category_id" ref="sms_mobile_api_call.module_category_smsmobileapi"/>
+        <field name="implied_ids" eval="[(4, ref('sms_mobile_api_call.group_smsmobileapi_user'))]"/>
+        <field name="users" eval="[(4, ref('base.user_admin'))]"/>
+    </record>
+
+    <record id="rule_smsmobileapi_config_company" model="ir.rule">
+        <field name="name">SMSMobileAPI configuration by company</field>
+        <field name="model_id" ref="model_smsmobileapi_config"/>
+        <field name="domain_force">[('company_id', 'in', company_ids)]</field>
+        <field name="groups" eval="[(4, ref('sms_mobile_api_call.group_smsmobileapi_manager'))]"/>
+    </record>
+    <record id="rule_smsmobileapi_mobile_company" model="ir.rule">
+        <field name="name">SMSMobileAPI mobiles by company</field>
+        <field name="model_id" ref="model_smsmobileapi_mobile"/>
+        <field name="domain_force">[('company_id', 'in', company_ids)]</field>
+        <field name="groups" eval="[(4, ref('sms_mobile_api_call.group_smsmobileapi_user'))]"/>
+    </record>
+    <record id="rule_smsmobileapi_activity_company" model="ir.rule">
+        <field name="name">SMSMobileAPI activities by company</field>
+        <field name="model_id" ref="model_smsmobileapi_activity"/>
+        <field name="domain_force">[('company_id', 'in', company_ids)]</field>
+        <field name="groups" eval="[(4, ref('sms_mobile_api_call.group_smsmobileapi_user'))]"/>
+    </record>
+    <record id="rule_smsmobileapi_conversation_company" model="ir.rule">
+        <field name="name">SMSMobileAPI conversations by company</field>
+        <field name="model_id" ref="model_smsmobileapi_conversation"/>
+        <field name="domain_force">[('company_id', 'in', company_ids)]</field>
+        <field name="groups" eval="[(4, ref('sms_mobile_api_call.group_smsmobileapi_user'))]"/>
+    </record>
+    <record id="rule_smsmobileapi_quick_reply_company" model="ir.rule">
+        <field name="name">SMSMobileAPI quick replies by company</field>
+        <field name="model_id" ref="model_smsmobileapi_quick_reply"/>
+        <field name="domain_force">[('company_id', 'in', company_ids)]</field>
+        <field name="groups" eval="[(4, ref('sms_mobile_api_call.group_smsmobileapi_user'))]"/>
+    </record>
+    <record id="rule_smsmobileapi_support_ticket_company" model="ir.rule">
+        <field name="name">SMSMobileAPI support tickets by company</field>
+        <field name="model_id" ref="model_smsmobileapi_support_ticket"/>
+        <field name="domain_force">[('company_id', 'in', company_ids)]</field>
+        <field name="groups" eval="[(4, ref('sms_mobile_api_call.group_smsmobileapi_user'))]"/>
+    </record>
+    <record id="rule_smsmobileapi_document_share_company" model="ir.rule">
+        <field name="name">SMSMobileAPI document links by company</field>
+        <field name="model_id" ref="model_smsmobileapi_document_share"/>
+        <field name="domain_force">[('company_id', 'in', company_ids)]</field>
+        <field name="groups" eval="[(4, ref('sms_mobile_api_call.group_smsmobileapi_user'))]"/>
+    </record>
+</odoo>

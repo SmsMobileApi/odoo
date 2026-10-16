@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_smsmobileapi_support_ticket_tree" model="ir.ui.view">
+        <field name="name">smsmobileapi.support.ticket.tree</field>
+        <field name="model">smsmobileapi.support.ticket</field>
+        <field name="arch" type="xml">
+            <tree decoration-danger="priority == '3'" decoration-muted="state in ('resolved', 'cancelled')">
+                <field name="priority" widget="priority"/>
+                <field name="create_date"/>
+                <field name="name"/>
+                <field name="partner_id"/>
+                <field name="phone_number"/>
+                <field name="assigned_user_id" widget="many2one_avatar_user"/>
+                <field name="state" widget="badge"/>
+            </tree>
+        </field>
+    </record>
+    <record id="view_smsmobileapi_support_ticket_form" model="ir.ui.view">
+        <field name="name">smsmobileapi.support.ticket.form</field>
+        <field name="model">smsmobileapi.support.ticket</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="action_start" type="object" string="Start" class="oe_highlight" invisible="state != 'new'"/>
+                    <button name="action_resolve" type="object" string="Resolve" class="oe_highlight" invisible="state not in ('new', 'progress')"/>
+                    <button name="action_reopen" type="object" string="Reopen" invisible="state not in ('resolved', 'cancelled')"/>
+                    <field name="state" widget="statusbar" statusbar_visible="new,progress,resolved"/>
+                </header>
+                <sheet>
+                    <field name="company_id" invisible="1"/>
+                    <div class="oe_title"><h1><field name="name"/></h1></div>
+                    <group>
+                        <group>
+                            <field name="partner_id"/>
+                            <field name="phone_number"/>
+                            <field name="assigned_user_id" widget="many2one_avatar_user"/>
+                        </group>
+                        <group>
+                            <field name="priority" widget="priority"/>
+                            <field name="source_activity_id" readonly="1"/>
+                            <field name="conversation_id" readonly="1"/>
+                        </group>
+                    </group>
+                    <group string="Request">
+                        <field name="description" nolabel="1"/>
+                    </group>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+    <record id="view_smsmobileapi_support_ticket_search" model="ir.ui.view">
+        <field name="name">smsmobileapi.support.ticket.search</field>
+        <field name="model">smsmobileapi.support.ticket</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <field name="partner_id"/>
+                <field name="phone_number"/>
+                <field name="assigned_user_id"/>
+                <filter string="Open" name="open" domain="[('state', 'in', ('new', 'progress'))]"/>
+                <filter string="My tickets" name="mine" domain="[('assigned_user_id', '=', uid)]"/>
+                <filter string="Urgent" name="urgent" domain="[('priority', 'in', ('2', '3'))]"/>
+            </search>
+        </field>
+    </record>
+    <record id="action_smsmobileapi_support_ticket" model="ir.actions.act_window">
+        <field name="name">Mobile Support Tickets</field>
+        <field name="res_model">smsmobileapi.support.ticket</field>
+        <field name="view_mode">tree,form,activity</field>
+        <field name="search_view_id" ref="view_smsmobileapi_support_ticket_search"/>
+        <field name="context">{'search_default_open': 1}</field>
+    </record>
+</odoo>

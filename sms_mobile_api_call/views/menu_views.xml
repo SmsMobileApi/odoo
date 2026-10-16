@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id="menu_smsmobileapi_root" name="SMSMobileAPI" action="action_smsmobileapi_home_guard" sequence="10" web_icon="sms_mobile_api_call,static/description/icon.png" groups="sms_mobile_api_call.group_smsmobileapi_user"/>
+
+    <menuitem id="menu_smsmobileapi_conversation" name="SMS Conversations" parent="menu_smsmobileapi_root" action="action_smsmobileapi_conversation_guard" sequence="10" groups="sms_mobile_api_call.group_smsmobileapi_user"/>
+    <menuitem id="menu_smsmobileapi_send" name="Send an SMS" parent="menu_smsmobileapi_root" action="action_smsmobileapi_send_guard" sequence="20" groups="sms_mobile_api_call.group_smsmobileapi_user"/>
+    <menuitem id="menu_smsmobileapi_activity" name="Complete Activity History" parent="menu_smsmobileapi_root" action="action_smsmobileapi_activity_guard" sequence="30" groups="sms_mobile_api_call.group_smsmobileapi_user"/>
+    <menuitem id="menu_smsmobileapi_support" name="Mobile Support Tickets" parent="menu_smsmobileapi_root" action="action_smsmobileapi_support_guard" sequence="40" groups="sms_mobile_api_call.group_smsmobileapi_user"/>
+    <menuitem id="menu_smsmobileapi_contacts" name="Contacts" parent="menu_smsmobileapi_root" action="action_smsmobileapi_contacts_guard" sequence="50" groups="sms_mobile_api_call.group_smsmobileapi_user"/>
+    <menuitem id="menu_smsmobileapi_mobiles" name="Connected Mobiles" parent="menu_smsmobileapi_root" action="action_smsmobileapi_mobiles_guard" sequence="60" groups="sms_mobile_api_call.group_smsmobileapi_user"/>
+    <menuitem id="menu_smsmobileapi_quick_replies" name="Quick Replies" parent="menu_smsmobileapi_root" action="action_smsmobileapi_quick_replies_guard" sequence="80" groups="sms_mobile_api_call.group_smsmobileapi_manager"/>
+    <menuitem id="menu_smsmobileapi_settings" name="Configuration" parent="menu_smsmobileapi_root" action="action_smsmobileapi_config" sequence="90" groups="sms_mobile_api_call.group_smsmobileapi_manager"/>
+</odoo>

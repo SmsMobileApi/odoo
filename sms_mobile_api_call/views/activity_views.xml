@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_smsmobileapi_activity_tree" model="ir.ui.view">
+        <field name="name">smsmobileapi.activity.tree</field>
+        <field name="model">smsmobileapi.activity</field>
+        <field name="arch" type="xml">
+            <tree create="false" delete="false" decoration-danger="status == 'error'" decoration-info="direction == 'incoming'">
+                <field name="company_id" column_invisible="True"/>
+                <field name="activity_at"/>
+                <field name="event_type" widget="badge"/>
+                <field name="direction" widget="badge"/>
+                <field name="partner_id"/>
+                <field name="phone_number"/>
+                <field name="message" optional="show"/>
+                <field name="duration_seconds" optional="hide"/>
+                <field name="mobile_id" optional="show"/>
+                <field name="status" widget="badge"/>
+                <field name="is_read" optional="show"/>
+                <field name="conversation_id" optional="hide"/>
+                <field name="source" optional="hide"/>
+                <button name="action_reply" type="object" string="Reply" icon="fa-reply" invisible="event_type != 'sms' or direction != 'incoming'"/>
+                <button name="action_create_business_action" type="object" string="Action" icon="fa-bolt" invisible="direction != 'incoming'"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_smsmobileapi_activity_form" model="ir.ui.view">
+        <field name="name">smsmobileapi.activity.form</field>
+        <field name="model">smsmobileapi.activity</field>
+        <field name="arch" type="xml">
+            <form create="false" edit="false" delete="false">
+                <header>
+                    <button name="action_reply" type="object" string="Reply by SMS" class="oe_highlight" icon="fa-reply" invisible="event_type != 'sms' or direction != 'incoming'"/>
+                    <button name="action_create_business_action" type="object" string="Create Odoo action" icon="fa-bolt" invisible="direction != 'incoming'"/>
+                    <button name="action_mark_read" type="object" string="Mark as read" icon="fa-check" invisible="is_read or direction != 'incoming'"/>
+                </header>
+                <sheet>
+                    <field name="company_id" invisible="1"/>
+                    <div class="oe_title"><h1><field name="name"/></h1></div>
+                    <group>
+                        <group>
+                            <field name="activity_at"/>
+                            <field name="event_type"/>
+                            <field name="direction"/>
+                            <field name="status"/>
+                            <field name="is_read"/>
+                            <field name="source"/>
+                        </group>
+                        <group>
+                            <field name="partner_id"/>
+                            <field name="phone_number"/>
+                            <field name="mobile_id"/>
+                            <field name="conversation_id"/>
+                            <field name="duration_seconds" invisible="event_type == 'sms'"/>
+                            <field name="external_ref" groups="sms_mobile_api_call.group_smsmobileapi_manager"/>
+                        </group>
+                    </group>
+                    <group string="Message" invisible="event_type != 'sms'">
+                        <field name="message" nolabel="1"/>
+                    </group>
+                    <group string="Related document" invisible="not document_model">
+                        <field name="document_model"/>
+                        <field name="document_id"/>
+                    </group>
+                    <group string="Odoo follow-up">
+                        <group>
+                            <field name="crm_lead_id" invisible="not crm_lead_id"/>
+                            <field name="project_task_id" invisible="not project_task_id"/>
+                            <field name="followup_activity_id" invisible="not followup_activity_id"/>
+                        </group>
+                        <group>
+                            <field name="support_ticket_id" invisible="not support_ticket_id"/>
+                            <field name="sale_order_id" invisible="not sale_order_id"/>
+                            <field name="invoice_id" invisible="not invoice_id"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_smsmobileapi_activity_search" model="ir.ui.view">
+        <field name="name">smsmobileapi.activity.search</field>
+        <field name="model">smsmobileapi.activity</field>
+        <field name="arch" type="xml">
+            <search string="Search SMS and calls">
+                <field name="partner_id"/>
+                <field name="phone_number"/>
+                <field name="message"/>
+                <field name="mobile_id"/>
+                <field name="status"/>
+                <field name="conversation_id"/>
+                <filter string="Incoming" name="incoming" domain="[('direction', '=', 'incoming')]"/>
+                <filter string="Outgoing" name="outgoing" domain="[('direction', '=', 'outgoing')]"/>
+                <separator/>
+                <filter string="SMS" name="sms" domain="[('event_type', '=', 'sms')]"/>
+                <filter string="Missed calls" name="missed" domain="[('event_type', '=', 'call_missed')]"/>
+                <filter string="Incoming calls" name="calls_in" domain="[('event_type', '=', 'call_incoming')]"/>
+                <filter string="Outgoing calls" name="calls_out" domain="[('event_type', '=', 'call_outgoing')]"/>
+                <filter string="Unread" name="unread" domain="[('direction', '=', 'incoming'), ('is_read', '=', False)]"/>
+                <filter string="Errors" name="errors" domain="[('status', '=', 'error')]"/>
+                <separator/>
+                <filter string="Activity date" name="activity_date" date="activity_at"/>
+                <group expand="0" string="Group By">
+                    <filter string="Contact" name="group_partner" context="{'group_by': 'partner_id'}"/>
+                    <filter string="Activity" name="group_event" context="{'group_by': 'event_type'}"/>
+                    <filter string="Direction" name="group_direction" context="{'group_by': 'direction'}"/>
+                    <filter string="Mobile" name="group_mobile" context="{'group_by': 'mobile_id'}"/>
+                    <filter string="Status" name="group_status" context="{'group_by': 'status'}"/>
+                    <filter string="Day" name="group_day" context="{'group_by': 'activity_at:day'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="view_smsmobileapi_activity_graph" model="ir.ui.view">
+        <field name="name">smsmobileapi.activity.graph</field>
+        <field name="model">smsmobileapi.activity</field>
+        <field name="arch" type="xml">
+            <graph string="SMS and call activity" type="bar" sample="1">
+                <field name="activity_at" interval="day"/>
+                <field name="event_type"/>
+            </graph>
+        </field>
+    </record>
+
+    <record id="view_smsmobileapi_activity_pivot" model="ir.ui.view">
+        <field name="name">smsmobileapi.activity.pivot</field>
+        <field name="model">smsmobileapi.activity</field>
+        <field name="arch" type="xml">
+            <pivot string="SMS and call activity" sample="1">
+                <field name="event_type" type="row"/>
+                <field name="direction" type="col"/>
+                <field name="activity_at" interval="month" type="col"/>
+            </pivot>
+        </field>
+    </record>
+
+    <record id="action_smsmobileapi_activity" model="ir.actions.act_window">
+        <field name="name">SMS &amp; Call Activity</field>
+        <field name="res_model">smsmobileapi.activity</field>
+        <field name="view_mode">tree,form,graph,pivot</field>
+        <field name="search_view_id" ref="view_smsmobileapi_activity_search"/>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">Your mobile communication timeline will appear here.</p>
+            <p>Connect SMSMobileAPI, enable the mobile permissions you need, then synchronize received and sent SMS plus missed, incoming and outgoing calls.</p>
+        </field>
+    </record>
+</odoo>

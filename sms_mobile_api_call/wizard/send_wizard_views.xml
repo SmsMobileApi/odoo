@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_smsmobileapi_send_wizard_form" model="ir.ui.view">
+        <field name="name">smsmobileapi.send.wizard.form</field>
+        <field name="model">smsmobileapi.send.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Send SMS with SMSMobileAPI">
+                <sheet>
+                    <div class="smsmobileapi_wizard_intro">
+                        <span class="smsmobileapi_wizard_icon fa fa-mobile" title="Connected mobile" aria-label="Connected mobile"/>
+                        <div>
+                            <h2>Send from your connected mobile</h2>
+                            <p>The recipient sees the number of the mobile selected below. Leave it empty to use the first available gateway.</p>
+                        </div>
+                    </div>
+                    <field name="state" invisible="1"/>
+                    <field name="company_id" invisible="1"/>
+                    <field name="source_model" invisible="1"/>
+                    <field name="source_id" invisible="1"/>
+                    <field name="message_kind" invisible="1"/>
+                    <field name="sent_activity_id" invisible="1"/>
+                    <field name="reply_to_activity_id" invisible="1"/>
+                    <group>
+                        <group>
+                            <field name="partner_id" options="{'no_create_edit': True}" readonly="state == 'sent'"/>
+                            <field name="recipient_phone" placeholder="+32470000000" readonly="state == 'sent'"/>
+                            <field name="mobile_id" placeholder="Automatic — first available mobile" readonly="state == 'sent'"/>
+                            <field name="quick_reply_id" placeholder="Choose a saved quick reply" options="{'no_create': True}" readonly="state == 'sent'"/>
+                        </group>
+                        <group>
+                            <field name="source_reference" invisible="not source_reference"/>
+                            <field name="send_at" readonly="state == 'sent'"/>
+                            <field name="shorten_urls" readonly="state == 'sent'"/>
+                        </group>
+                    </group>
+                    <group string="Message">
+                        <field name="message" nolabel="1" placeholder="Write the SMS message…" readonly="state == 'sent'"/>
+                    </group>
+                    <group string="Optional secure document">
+                        <div class="alert alert-info" role="alert" colspan="2">
+                            Attach a file to append a random, expiring HTTPS link to the SMS. The link expires automatically and the original API key is never exposed.
+                        </div>
+                        <field name="upload" filename="upload_filename" readonly="state == 'sent'"/>
+                        <field name="upload_filename" invisible="1"/>
+                        <field name="secure_link_days" readonly="state == 'sent'"/>
+                    </group>
+                    <div class="alert alert-warning" role="alert">
+                        A successful API response means the message was queued. The connected phone and carrier may need a short processing time before the SMS is sent.
+                    </div>
+                </sheet>
+                <footer>
+                    <button name="action_send" type="object" string="Send SMS" class="btn-primary" data-hotkey="s" invisible="state == 'sent'"/>
+                    <button string="Close" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_smsmobileapi_send_wizard" model="ir.actions.act_window">
+        <field name="name">Send an SMS</field>
+        <field name="res_model">smsmobileapi.send.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+        <field name="context">{'default_message_kind': 'free'}</field>
+    </record>
+</odoo>

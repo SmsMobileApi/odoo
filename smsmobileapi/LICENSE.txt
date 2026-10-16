@@ -1,7 +1,0 @@
-This module is proprietary and protected by copyright.
-
-Reproduction, distribution, modification, or use of this code without a valid license agreement is strictly prohibited.
-
-To obtain a commercial license or ask questions, please contact us:
-📧 info@smsmobileapi.com
-🌐 https://www.smsmobileapi.com
