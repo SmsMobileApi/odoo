@@ -1,69 +1,39 @@
-# 📲 SMSMobileAPI – Odoo Integration
+# SMSMobileAPI for Odoo 17
 
-Official Odoo module to send SMS directly from your Odoo instance using [SMSMobileAPI](https://smsmobileapi.com/plugin-odoo/).
+Connect an Odoo contact to the user's own Android mobile through SMSMobileAPI.
 
-## 🚀 Features
+The free **SMSMobileAPI SMS & Calls** addon adds:
 
-- ✅ Send SMS from:
-  - **Contacts (res.partner)**: directly from the contact form or list view
-  - **Invoices (account.move)**: pre-filled message with all invoice details
-- ✅ Uses your **SMSMobileAPI account** and your **own mobile phone**
-- ✅ Configuration via Odoo Settings
-- ✅ Works with the default Odoo database structure
+- two-way SMS conversations on contacts;
+- SMS inbox assignment, priorities, notes and archives;
+- incoming, outgoing and missed call activity;
+- quick replies from Odoo;
+- actions that create CRM opportunities, tasks, quotations and helpdesk tickets;
+- invoice, quotation, sales-order and payment-reminder sharing by SMS;
+- connected-mobile selection and permission-readiness checks;
+- multi-company access controls and an explicit data-transfer consent step.
 
-## 🛠️ Setup Instructions
+## Install
 
-1. Copy the `smsmobileapi` module into your Odoo `addons` folder.
-2. Restart Odoo and update the apps list.
-3. Install the module `SMSMobileAPI`.
-4. Go to **Settings > SMS Mobile API** to configure:
-   - Your **API Key**
-   - Your **linked mobile number**
+Use the `17.0` branch:
 
-## 📝 Usage
+```text
+ssh://git@github.com/SmsMobileApi/odoo#17.0
+```
 
-- Open any **Contact** or **Invoice**
-- Click the **"Send SMS"** button
-- A pop-up will show:
-  - The phone number (pre-filled)
-  - A default message based on contact or invoice data
-- You can edit the message before sending
+The addon directory is `sms_mobile_api_call`.
 
-> 💡 SMS are sent **via your mobile phone**, not through a third-party SMS gateway.
+A SMSMobileAPI account and the official SMSMobileAPI Android application are required. The addon communicates only with `https://api.smsmobileapi.com`; configuration credentials remain server-side.
 
-## 🧪 Current Limitations
+## Compatibility
 
-- ❌ SMS can only be sent from Contacts and Invoices
-- ❌ No custom templates (yet)
-- ❌ No logging/tracking inside Odoo (for now)
+- Odoo 17.0 Community and Enterprise
+- Python 3.10+
+- SMSMobileAPI account and connected Android mobile
 
-## 🔜 Coming Soon
+## License and support
 
-The next version will include:
-- SMS from **any model or custom document**
-- Message templates
-- History of sent SMS
-- Automated SMS via server actions or workflows
+The addon is distributed under LGPL-3.0.
 
-## 📦 Compatibility
-
-- Odoo 17 (Community & Enterprise)
-
-## 🔐 License
-
-**Proprietary license** – all rights reserved.
-
-You are not allowed to reuse or distribute this code without permission.  
-For commercial usage, please contact: [info@smsmobileapi.com](mailto:info@smsmobileapi.com)
-
-## 🔗 Related Integrations
-
-- ✅ WooCommerce Plugin  
-- ✅ Shopify App  
-- ✅ Zapier Integration  
-- ✅ Python Library  
-- ✅ Mobile App (Android & iOS)
-
----
-
-Made with ❤️ by [SMSMobileAPI](https://smsmobileapi.com)
+Support: support@smsmobileapi.com  
+Product: https://smsmobileapi.com/odoo/
